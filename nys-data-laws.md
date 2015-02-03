@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 #NYS Law
 
 There are numerous statutes that confer confidentiality by exempting particular records from disclosure.
