@@ -1,3 +1,8 @@
+---
+layout: default
+---
+
+
 # Random stuff
 
 * [NYS Open Data Portal](https://data.ny.gov)
