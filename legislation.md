@@ -4,7 +4,7 @@ layout: default
 
 # Proposed Legislation for Technology, Data, Reporting and/or Transparency
 
-See also [NYS data laws](nys-data-laws.html) for laws which impact the publication, internal sharing, or general use of state records and data.
+Not intended to be an exhaustive list! See also [NYS data laws](nys-data-laws.html) for a selection of enacted laws which impact the publication, internal sharing, or general use of state records and data.
 
 ## Directly Related
 
