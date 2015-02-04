@@ -2,7 +2,10 @@
 layout: default
 ---
 
-Statewide Membership Organizations with Broad Functions
+# Local Associations
+
+## Statewide Membership Organizations with Broad Functions
+
 * [NYS City/County Management Association](http://www.nyscma.govoffice.com/) ([ICMA](http://icma.org/) affiliate)
 * [NYS Association of City and Village Clerks](http://www.nysclerks.com/)
 * [NYS Association of Counties](http://www.nysac.org/)
@@ -11,7 +14,8 @@ Statewide Membership Organizations with Broad Functions
 * [NYS Association of Towns of the State of New York](http://www.nytowns.org/)
 * [NYS Town Clerks Association](http://www.nystca.com/)
 
-Statewide Organizations for Specific Government Functions)
+## Statewide Organizations for Specific Government Functions)
+
 * [Association of Fire Districts of the State of New York](http://www.firedistnys.com/)
 * [NYS Assessors' Association](http://www.nyassessor.com/)
 * [NYS Association of Magistrates Court Clerks, Inc.](http://www.nysamcc.com/)
@@ -25,7 +29,8 @@ Statewide Organizations for Specific Government Functions)
 * [NYS Society of Municipal Finance Officers](http://www.nysmunicipalfinanceofficers.org/)
 * [State Association of Municipal Purchasing Officers (SAMPO)](http://www.nysampo.org/)
 
-Regional Organizations
+## Regional Organizations
+
 * [Cornell Local Roads Program](http://www.clrp.cornell.edu/index.htm)
 * [Genesee/Finger Lakes Regional Planning Council](http://www.gflrpc.org/)
 * [Nassau County Village Officials Association](http://www.ncvoa.org/)
