@@ -14,7 +14,7 @@ layout: default
 * [NYS Association of Towns of the State of New York](http://www.nytowns.org/)
 * [NYS Town Clerks Association](http://www.nystca.com/)
 
-## Statewide Organizations for Specific Government Functions)
+## Statewide Organizations for Specific Government Functions
 
 * [Association of Fire Districts of the State of New York](http://www.firedistnys.com/)
 * [NYS Assessors' Association](http://www.nyassessor.com/)
