@@ -10,6 +10,6 @@ layout: default
 * [NYS Open Data Handbook](http://nys-its.github.io/open-data-handbook/)
 
 
-* [Local Government Organizations](local-associations.md]
+* [Local Government Organizations](local-associations.md)
 * coming soon: [NYS laws governing the use of data](nys-data-laws.html)
 
