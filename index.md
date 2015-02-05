@@ -11,5 +11,5 @@ layout: default
 
 
 * [Local Government Organizations](local-associations.html)
-* [Enacted laws governing the use of data](nys-data-laws.html) (in development)
+* [Enacted laws governing the use of data](enacted-laws.html) (in development)
 * [Pending legislation relating to technology, data, reporting, and/or transparency](legislation.html)
