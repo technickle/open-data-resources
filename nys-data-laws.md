@@ -29,11 +29,11 @@ NOTE: this page is still under development. [Download the raw data](nys-data-law
             "processing": true,  // only useful if DataTable's ajax handler is used
             "order": [[1, "asc"]],
             "columns": [
-              {"title": "Source", "data": "Source"},
-              {"title": "Law/Act", "data": "Law"},
-              {"title": "Section, Subsection(s)", "data": "Section"},
-              {"title": "Description", "data":"Description"},
-              {"title": "Notes", "data": "Notes"}
+              {"title": "Source", "data": "Source", "width": "10%"},
+              {"title": "Law/Act", "data": "Law", "width": "15%"},
+              {"title": "Section, Subsection(s)", "data": "Section", "width": "20%"},
+              {"title": "Description", "data":"Description", "width": "55%"},
+              {"title": "Notes", "data": "Notes", "width": "25%"}
   
               //{"title":"Title", "data": "title", "render": function(data, type, full, meta){
               //  if (full.landingPage) { return '<a href="' + full.landingPage + '" target="_new">' + data + '</a>'}
