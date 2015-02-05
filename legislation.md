@@ -4,7 +4,7 @@ layout: default
 
 # Proposed Legislation impacting Technology, Data, Reporting and/or Transparency
 
-This is not intended to be an exhaustive list. See also [enacted laws](nys-data-laws.html) for similar laws which have already been passed.
+This is not intended to be an exhaustive list. See also [enacted laws](enacted-laws.html) for laws which are already in effect.
 
 ## Directly Related
 
