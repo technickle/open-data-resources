@@ -26,11 +26,11 @@ Below are brief references to some of the records and the statutes, provided for
           "processing": true,  // only useful if DataTable's ajax handler is used
           "order": [[1, "asc"]],
           "columns": [
-            {"title":"Source", "data": "Source"},
-            {"title":"Law/Act", "data": "Law or Act"},
-            {"title":"Section, Subsection(s)", "data": "Section, Subsection(s)"},
-            {"title":"Description", "data":"Description"},
-            {"title","Notes", "data": "Notes"}
+            {"title": "Source", "data": "Source"},
+            {"title": "Law/Act", "data": "Law or Act"},
+            {"title": "Section, Subsection(s)", "data": "Section, Subsection(s)"},
+            {"title": "Description", "data":"Description"},
+            {"title": "Notes", "data": "Notes"}
           ]
             //{"title":"Title", "data": "title", "render": function(data, type, full, meta){
             //  if (full.landingPage) { return '<a href="' + full.landingPage + '" target="_new">' + data + '</a>'}
