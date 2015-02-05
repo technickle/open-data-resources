@@ -18,7 +18,7 @@ Below are brief references to some of the records and the statutes, provided for
 <script type="text/javascript">
 
   $( document ).ready(function() {
-    $.ajax("nys-data-laws.csv", {
+    $.ajax("enacted-laws.csv", {
       success: function(returnedData, textStatus, jqXHR) {
         $.csv.toObjects(returnedData, {}, function(err, csvData) {
           $("#laws-div").html('<span id="laws_count"></span><table id="laws-table" cellpadding="0" cellspacing="0" border="0" class="display" width="100%"></table>');
