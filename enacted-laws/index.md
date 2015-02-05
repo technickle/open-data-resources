@@ -7,6 +7,7 @@ layout: default
 See also: [pending legislation](../legislation)
 
 There are numerous statutes that confer confidentiality by exempting particular records from disclosure. Due to recent changes to the state's [legislative information site](http://public.leginfo.state.ny.us/lawssrch.cgi?NVLWO:), the links below do not work correctly. Below are brief references to some of the records and the statutes, provided for informational purposes only.  ([Download as raw data](enacted-laws.csv)).
+
 <div id="laws-div"></div>
 <script type="text/javascript" src="//code.jquery.com/jquery-2.1.3.min.js"></script>
 <script type="text/javascript" src="//cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
