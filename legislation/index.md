@@ -4,7 +4,7 @@ layout: default
 
 # Proposed Legislation impacting Technology, Data, Reporting and/or Transparency
 
-This is not intended to be an exhaustive list. See also [enacted laws](enacted-laws.html) for laws which are already in effect.
+This is not intended to be an exhaustive list. See also [enacted laws](../enacted-laws) for laws which are already in effect.
 
 ## Directly Related
 
