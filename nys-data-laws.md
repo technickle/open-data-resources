@@ -14,6 +14,8 @@ Below are brief references to some of the records and the statutes, provided for
 <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.4/css/jquery.dataTables.min.css"></link>
 
 <script>
-
+  $( document ).ready(function() {
+    alert("hello")
+  })
 
 </script>
