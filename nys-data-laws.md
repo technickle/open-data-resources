@@ -42,7 +42,7 @@ Below are brief references to some of the records and the statutes, provided for
       },
       error: function(jqXHR, textStatus, errorThrown) {
         alert("unable to load CSV data file: " + errorThrown);
-      };
+      }
     });
   });
   
