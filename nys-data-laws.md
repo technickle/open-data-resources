@@ -31,17 +31,19 @@ Below are brief references to some of the records and the statutes, provided for
             {"title": "Section, Subsection(s)", "data": "Section, Subsection(s)"},
             {"title": "Description", "data":"Description"},
             {"title": "Notes", "data": "Notes"}
-          ]
+
             //{"title":"Title", "data": "title", "render": function(data, type, full, meta){
             //  if (full.landingPage) { return '<a href="' + full.landingPage + '" target="_new">' + data + '</a>'}
             //    else {return data}
             //  }},
+          ]
         });
-        $("#dc_count").text('Total items: ' + $("#dc_table").DataTable().rows()[0].length);
+        $("#laws_count").text('Total items: ' + $("#dc_table").DataTable().rows()[0].length);
       },
       error: function(jqXHR, textStatus, errorThrown) {
         alert("unable to load CSV data file: " + errorThrown);
-      }
-  })
+      };
+    });
+  });
   
 </script>
