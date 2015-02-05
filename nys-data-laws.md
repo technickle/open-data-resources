@@ -18,33 +18,36 @@ Below are brief references to some of the records and the statutes, provided for
   $( document ).ready(function() {
     $.ajax("nys-data-laws.csv", {
       success: function(returnedData, textStatus, jqXHR) {
-        csvData = $.csv.toObjects(returnedData);
-        console.log(csvData);
-        $("#laws-div").html('<span id="laws_count"></span><table id="laws-table_table" cellpadding="0" cellspacing="0" border="0" class="display" width="100%"></table>');
-        $("#dc_table").DataTable({
-          // "ajax": webUrl,   // loading data this way doesn't work. Maybe a jquery version compatability issue?
-          "data": returnedData,
-          "paging": false,
-          "processing": true,  // only useful if DataTable's ajax handler is used
-          "order": [[1, "asc"]],
-          "columns": [
-            {"title": "Source", "data": "Source"},
-            {"title": "Law/Act", "data": "Law or Act"},
-            {"title": "Section, Subsection(s)", "data": "Section, Subsection(s)"},
-            {"title": "Description", "data":"Description"},
-            {"title": "Notes", "data": "Notes"}
-
-            //{"title":"Title", "data": "title", "render": function(data, type, full, meta){
-            //  if (full.landingPage) { return '<a href="' + full.landingPage + '" target="_new">' + data + '</a>'}
-            //    else {return data}
-            //  }},
-          ]
+        $.csv.toObjects(returnedData, function(err, csvData) {
+          console.log(csvData);
+          $("#laws-div").html('<span id="laws_count"></span><table id="laws-table_table" cellpadding="0" cellspacing="0" border="0" class="display" width="100%"></table>');
+          $("#dc_table").DataTable({
+            // "ajax": webUrl,   // loading data this way doesn't work. Maybe a jquery version compatability issue?
+            "data": returnedData,
+            "paging": false,
+            "processing": true,  // only useful if DataTable's ajax handler is used
+            "order": [[1, "asc"]],
+            "columns": [
+              {"title": "Source", "data": "Source"},
+              {"title": "Law/Act", "data": "Law or Act"},
+              {"title": "Section, Subsection(s)", "data": "Section, Subsection(s)"},
+              {"title": "Description", "data":"Description"},
+              {"title": "Notes", "data": "Notes"}
+  
+              //{"title":"Title", "data": "title", "render": function(data, type, full, meta){
+              //  if (full.landingPage) { return '<a href="' + full.landingPage + '" target="_new">' + data + '</a>'}
+              //    else {return data}
+              //  }},
+            ]
+          });
+          $("#laws_count").text('Total items: ' + $("#laws_table").DataTable().rows()[0].length);
         });
-        $("#laws_count").text('Total items: ' + $("#laws_table").DataTable().rows()[0].length);
       },
       error: function(jqXHR, textStatus, errorThrown) {
         alert("unable to load CSV data file: " + errorThrown);
       }
+          
+          
     });
   });
   
