@@ -2,7 +2,7 @@
 layout: default
 ---
 
-#NYS Law
+## Laws that restrict the use of, or confer confidentiality, state records and data
 
 See also: [pending legislation](../legislation)
 
