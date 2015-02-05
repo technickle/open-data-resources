@@ -21,11 +21,10 @@ NOTE: this page is still under development. [Download the raw data](nys-data-law
     $.ajax("nys-data-laws.csv", {
       success: function(returnedData, textStatus, jqXHR) {
         $.csv.toObjects(returnedData, {}, function(err, csvData) {
-          console.log(csvData);
           $("#laws-div").html('<span id="laws_count"></span><table id="laws-table" cellpadding="0" cellspacing="0" border="0" class="display" width="100%"></table>');
           $("#laws-table").DataTable({
             // "ajax": webUrl,   // loading data this way doesn't work. Maybe a jquery version compatability issue?
-            "data": returnedData,
+            "data": csvData,
             "paging": false,
             "processing": true,  // only useful if DataTable's ajax handler is used
             "order": [[1, "asc"]],
