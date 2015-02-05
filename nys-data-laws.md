@@ -31,8 +31,8 @@ NOTE: this page is still under development. [Download the raw data](nys-data-law
             "order": [[1, "asc"]],
             "columns": [
               {"title": "Source", "data": "Source"},
-              {"title": "Law/Act", "data": "Law or Act"},
-              {"title": "Section, Subsection(s)", "data": "Section, Subsection(s)"},
+              {"title": "Law/Act", "data": "Law"},
+              {"title": "Section, Subsection(s)", "data": "Section"},
               {"title": "Description", "data":"Description"},
               {"title": "Notes", "data": "Notes"}
   
