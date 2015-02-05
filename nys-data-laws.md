@@ -20,7 +20,7 @@ NOTE: this page is still under development. [Download the raw data](nys-data-law
   $( document ).ready(function() {
     $.ajax("nys-data-laws.csv", {
       success: function(returnedData, textStatus, jqXHR) {
-        $.csv.toObjects(returnedData, null, function(err, csvData) {
+        $.csv.toObjects(returnedData, {}, function(err, csvData) {
           console.log(csvData);
           $("#laws-div").html('<span id="laws_count"></span><table id="laws-table_table" cellpadding="0" cellspacing="0" border="0" class="display" width="100%"></table>');
           $("#dc_table").DataTable({
