@@ -38,7 +38,7 @@ Below are brief references to some of the records and the statutes, provided for
             //  }},
           ]
         });
-        $("#laws_count").text('Total items: ' + $("#dc_table").DataTable().rows()[0].length);
+        $("#laws_count").text('Total items: ' + $("#laws_table").DataTable().rows()[0].length);
       },
       error: function(jqXHR, textStatus, errorThrown) {
         alert("unable to load CSV data file: " + errorThrown);
