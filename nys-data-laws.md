@@ -26,7 +26,7 @@ Below are brief references to some of the records and the statutes, provided for
             "data": returnedData,
             "paging": false,
             "processing": true,  // only useful if DataTable's ajax handler is used
-            "order": [[1, "asc"]] //,
+            "order": [[1, "asc"]],
             "columns": [
               {"title": "Source", "data": "Source"},
               {"title": "Law/Act", "data": "Law or Act"},
