@@ -30,11 +30,11 @@ NOTE: this page is still under development. [Download the raw data](nys-data-law
             "order": [[1, "asc"]],
             "columns": [
               {"title": "Source", "data": "Source", "width": "10%"},
-              {"title": "Law", "data": "Law", "width": "15%", "render": function(data, type, full, meta){
+              {"title": "Law", "data": "Law", "width": "35%", "render": function(data, type, full, meta){
                 if (full.Link) { return '<a href="' + full.Link + '" target="_new">' + full.Law + ' ' + full.Section + '</a>' }
                   else { return full.Law + ' ' + full.Section }
               }},
-              {"title": "Description", "data":"Description", "width": "60%"},
+              {"title": "Description", "data":"Description", "width": "40%"},
               {"title": "Notes", "data": "Notes", "width": "20%"}
   
               //{"title":"Title", "data": "title", "render": function(data, type, full, meta){
