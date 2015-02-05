@@ -13,7 +13,8 @@ Below are brief references to some of the records and the statutes, provided for
 <script type="text/javascript" src="js/jquery-csv.0.71.js"></script>
 <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.4/css/jquery.dataTables.min.css">
 
-<script type=text/javascript">
+<script type="text/javascript">
+
   $( document ).ready(function() {
     $.ajax("nys-data-laws.csv", {
       success: function(returnedData, textStatus, jqXHR) {
@@ -42,4 +43,5 @@ Below are brief references to some of the records and the statutes, provided for
         alert("unable to load CSV data file: " + errorThrown);
       }
   })
+  
 </script>
