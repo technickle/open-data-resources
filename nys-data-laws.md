@@ -18,6 +18,7 @@ Below are brief references to some of the records and the statutes, provided for
   $( document ).ready(function() {
     $.ajax("nys-data-laws.csv", {
       success: function(returnedData, textStatus, jqXHR) {
+        console.log(returnedData);
         $("#laws-div").html('<span id="laws_count"></span><table id="laws-table_table" cellpadding="0" cellspacing="0" border="0" class="display" width="100%"></table>');
         $("#dc_table").DataTable({
           // "ajax": webUrl,   // loading data this way doesn't work. Maybe a jquery version compatability issue?
