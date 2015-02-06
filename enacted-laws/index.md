@@ -31,7 +31,7 @@ There are numerous statutes that govern how state records and data may or may no
               {"title": "Requirement(s)","data":"requires", "width": "10%"},
               {"title": "Source", "data": "source", "width": "10%"},
               {"title": "Law", "data": "Law", "width": "35%", "render": function(data, type, full, meta){
-                if (full.Link) { return '<a href="' + full.link + '" target="_new">' + full.law + ' ' + full.section + '</a>' }
+                if (full.link) { return '<a href="' + full.link + '" target="_new">' + full.law + ' ' + full.section + '</a>' }
                   else { return full.law + ' ' + full.section }
               }},
               {"title": "Description", "data":"description", "width": "35%"},
