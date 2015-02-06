@@ -28,7 +28,7 @@ This is not intended to be an exhaustive list. See also [enacted laws](../enacte
             "columns": [
               {"title": "Relevance", "data":"relevance", "width":"5%"},
               {"title": "Identifier(s)", "render": function(data,type,full,meta){
-                if (full.link) { return '<a href="' full.link + '" target="_new">' + full.assemblyId + ' ' + full.senateId + ' ' + full.jointId + '</a>' }
+                if (full.link) { return '<a href="' + full.link + '" target="_new">' + full.assemblyId + ' ' + full.senateId + ' ' + full.jointId + '</a>' }
                   else { return full.assemblyId + ' ' + full.senateId + ' ' + full.jointId}
               }, "width":"10%"},
               {"title": "Subject(s)", "data": "subjects", "width": "10%"},
