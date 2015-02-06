@@ -28,7 +28,7 @@ There are numerous statutes that govern how state records and data may or may no
             "processing": true,  // only useful if DataTable's ajax handler is used
             "order": [[1, "asc"]],
             "columns": [
-              {"title": "Requirement","data":"requires", "width": "10%"},
+              {"title": "Requirement(s)","data":"requires", "width": "10%"},
               {"title": "Source", "data": "source", "width": "10%"},
               {"title": "Law", "data": "Law", "width": "35%", "render": function(data, type, full, meta){
                 if (full.Link) { return '<a href="' + full.link + '" target="_new">' + full.law + ' ' + full.section + '</a>' }
