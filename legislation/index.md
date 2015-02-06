@@ -4,7 +4,7 @@ layout: default
 
 # Legislative activities impacting Technology, Data, Reporting and/or Transparency
 
-This is not intended to be an exhaustive list. See also [enacted laws](../enacted-laws) for laws which are already in effect.
+This is not intended to be an exhaustive list. See also [enacted laws](../enacted-laws) for laws which are already in effect. ([Download as raw data]("legislative-actions.csv"))
 
 <div id="actions-div"></div>
 <script type="text/javascript" src="//code.jquery.com/jquery-2.1.3.min.js"></script>
