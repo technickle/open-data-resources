@@ -2,10 +2,9 @@
 layout: default
 ---
 
-## Information
+## Laws and Legislative Actions
 * [Enacted laws governing the use of data](enacted-laws)
 * [Pending legislation relating to technology, data, reporting, and/or transparency](legislation)
-* [Local Government Organizations](local-associations)
 
 ## Data Sources
 * [Open Data Portal](https://data.ny.gov/) - contains data from state agencies, authorities, etc, within the executive branch (including the [Health Data Portal](https://health.data.ny.gov/)). Operated by ITS on behalf of the Executive Chamber.
@@ -17,4 +16,8 @@ layout: default
 * [Executive Order 95](http://www.governor.ny.gov/news/no-95-using-technology-promote-transparency-improve-government-performance-and-enhance-citizen) - creates the Open New York (#OpenNY) program and defines a high-level governance model for publishing executive agency data.
 * [NYS Open Data Handbook](http://nys-its.github.io/open-data-handbook/)
 * [GIS Data Sharing Policy](https://www.its.ny.gov/policy/NYS-P10-003.pdf) (pdf)
+
+## Additional resources
+* [Local Government Organizations](local-associations)
+
 
