@@ -4,7 +4,7 @@ layout: default
 
 ## Laws that restrict the use of, or confer confidentiality, state records and data
 
-See also: [pending legislation](../legislation)
+See also: [pending legislative actions](../legislation)
 
 There are numerous statutes that confer confidentiality by exempting particular records from disclosure. Due to recent changes to the state's [legislative information site](http://public.leginfo.state.ny.us/lawssrch.cgi?NVLWO:), the links below do not work correctly. Below are brief references to some of the records and the statutes, provided for informational purposes only.  ([Download as raw data](enacted-laws.csv)).
 
