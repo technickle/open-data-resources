@@ -2,44 +2,48 @@
 layout: default
 ---
 
-# Proposed Legislation impacting Technology, Data, Reporting and/or Transparency
+# Legislative activities impacting Technology, Data, Reporting and/or Transparency
 
 This is not intended to be an exhaustive list. See also [enacted laws](../enacted-laws) for laws which are already in effect.
 
-## Directly Related
+<div id="actions-div"></div>
+<script type="text/javascript" src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="//cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="../js/jquery-csv.0.71.js"></script>
+<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.4/css/jquery.dataTables.min.css">
 
-* [A00230/S01058: Lymphedema and lymphatic disease grants program](http://assembly.state.ny.us/leg/?default_fld=&bn=A00230&term=2015&Summary=Y&Actions=Y&Votes=Y&Memo=Y&Text=Y) - establishes the program and limits disclosure of information.
-* [A00393/S03186: Alzheimer's Patient Locator Technology](http://assembly.state.ny.us/leg/?default_fld=&bn=A00393&term=2015&Summary=Y&Actions=Y&Votes=Y&Memo=Y) - establishes a list of possible technologies to assist in locating lost/disoriented Alzheimer's patients, requires physicians to share the list with patients, and requires physicians to maintain a list of patients using such technologies.
-* [A00690/S03095: Information Technology Innovation Center](http://assembly.state.ny.us/leg/?default_fld=&bn=A00690&term=2015&Summary=Y&Actions=Y&Votes=Y&Memo=Y&Text=Y) - creates a center for development, demonstration, and piloting new technologies of benefit to New Yorkers.
-* [A01129/S01975: electronic permit applications and recordkeeping](http://assembly.state.ny.us/leg/?default_fld=&bn=A01129&term=2015&Summary=Y&Actions=Y&Votes=Y&Memo=Y&Text=Y) - permits the use of electronic filing for business permits or other licenses using e-signatures.
-* [A01213: defendant fingerprints](http://assembly.state.ny.us/leg/?default_fld=&bn=A01213&term=2015&Summary=Y&Actions=Y&Votes=Y&Memo=Y&Text=Y) - allows judges to order fingerprint checks against state and national identification systems.
-* [A01833/S00513: Domestic Violence Protection Act](http://assembly.state.ny.us/leg/?default_fld=&bn=A01833&term=2015&Summary=Y&Actions=Y&Votes=Y&Memo=Y&Text=Y) - enacts "Brittany's Law", which requires the creation of a violent offender registry.
-* [A02455/S01719: Registry of accessible/adaptable housing](http://assembly.state.ny.us/leg/?default_fld=&bn=A02455&term=2015&Summary=Y&Actions=Y&Votes=Y&Memo=Y&Text=Y) - requires DHCR to establish a statewide registry of housing that can accommodate people with disabilities. Registry must be accessible by website and phone; requires landlords with 3 or more accessible units to register them with DHCR.
-* [A02610: Locator technology advisory council (Alzheimer's)](http://assembly.state.ny.us/leg/?default_fld=&bn=A02610&term=2015&Summary=Y&Actions=Y&Votes=Y&Memo=Y&Text=Y) - establishes an advisory group to work with DFA to support locator technology for those diagnosed with Alzheimer's. See also A03136, and A03404 for similar objectives.
-* [A02620: FOIL amendment](http://assembly.state.ny.us/leg/?default_fld=&bn=A02620&term=2015&Summary=Y&Actions=Y&Votes=Y&Memo=Y&Text=Y) - broadly excludes collections of data from FOIL disclosure.
-* [A03102/S01198: DMV/NYSPIN integration](http://assembly.state.ny.us/leg/?default_fld=&bn=A03102&term=2015&Summary=Y&Actions=Y&Votes=Y&Memo=Y&Text=Y) - enables law enforcement to get updated data for people with open criminal warrants from DMV transactions such as license renewals, registrations, etc).
-* [A03136: Alzheimer's Program](http://assembly.state.ny.us/leg/?default_fld=&bn=A03136&term=2015&Summary=Y&Actions=Y&Votes=Y&Memo=Y&Text=Y) - enables detection, _mapping_, and education for Alzheimer's disease. See also A02610 and A03404 for similar objectives.
-* [A03164: "Right to be Forgotten" and data use protections for minors](http://assembly.state.ny.us/leg/?default_fld=&bn=A03164&term=2015&Summary=Y&Actions=Y&Votes=Y&Memo=Y&Text=Y) - requires online providers to offer minors the ability to delete their own content. Also limits how personal data may be used for marketing and other purposes, and explicitly prohibits certain products or services from being advertised to minors via online platforms.
-* [A03404: Researching and recommending technologies to locating missing minors](http://assembly.state.ny.us/leg/?default_fld=&bn=A03404&term=2015&Summary=Y&Actions=Y&Votes=Y&Memo=Y&Text=Y) - aims to develop a report on how local governments use technology to help locate minors, and make recommendations for statewide interoperability standards and implementation. See also A02610 and A03136 for similar objectives.
-* [A03470: Reporting child abuse via instant messaging](http://assembly.state.ny.us/leg/?default_fld=&bn=A03470&term=2015&Summary=Y&Actions=Y&Votes=Y&Memo=Y&Text=Y) - requires OCFS to accept reports of child abuse (inclusive of photos) via instant messaging technologies with follow-up full reports within 48 hours, and requires OCFS to maintain data related to the reports.
-* [A03633: NYCHA open code violations](http://assembly.state.ny.us/leg/?default_fld=&bn=A03633&term=2015&Summary=Y&Actions=Y&Votes=Y&Memo=Y&Text=Y)- requires NYCHA to publish data about open code violations.
-* [A04069: Justice Center reporting](http://assembly.state.ny.us/leg/?default_fld=&bn=A04069&term=2015&Summary=Y&Actions=Y&Votes=Y&Memo=Y&Text=Y) - requires weekly public metric reporting and specifies additional details for inclusion in bi-annual reports.
-* [A04088: Criminal status checks for public assistance applications](http://assembly.state.ny.us/leg/?default_fld=&bn=A04088&term=2015&Summary=Y&Actions=Y&Votes=Y&Memo=Y&Text=Y) - requires & enables specific data exchange between NYS DCJS and local government social service agencies.
-* [A04098: resultsny.gov](http://assembly.state.ny.us/leg/?default_fld=&bn=A04098&term=2015&Summary=Y&Actions=Y&Votes=Y&Memo=Y&Text=Y) - requires a public performance reporting web site operated by ITS, and empowers ITS to conduct data collection activites to support it.
-* [A04117: Creating the Division of Regulatory Review and Economic Growth](http://assembly.state.ny.us/leg/?default_fld=&bn=A04117&term=2015&Summary=Y&Actions=Y&Votes=Y&Memo=Y&Text=Y) - enables this new division to obtain any necessary data in support of its goals from other state government entities.
-* [A04481: Creating a lifespan respite care program](http://assembly.state.ny.us/leg/?default_fld=&bn=A04481&term=2015&Summary=Y&Actions=Y&Votes=Y&Memo=Y&Text=Y) - creates the program and enables data gathering and metrics tracking.
-* [A04587: OCFS data collection](http://assembly.state.ny.us/leg/?default_fld=&bn=A04587&term=2015&Summary=Y&Actions=Y&Votes=Y&Memo=Y&Text=Y) - requires certain data to be collected from individuals admitted to certain facilities.
-* [S02818: Felony release of personal data](http://assembly.state.ny.us/leg/?default_fld=&bn=S02818&term=2015&Summary=Y&Actions=Y&Votes=Y&Memo=Y&Text=Y) - makes it a Class E felony to release personal data (specifically defined in the bill) without authorization.
-* [S02987: Auto insurance claims](http://assembly.state.ny.us/leg/?default_fld=&bn=S02987&term=2015&Summary=Y&Actions=Y&Votes=Y&Memo=Y&Text=Y) - requires insurance claims to be reoprted to DFS and published publicly.
+<script type="text/javascript">
 
-## Indirectly Related
-
-* [A02115: Expands identity theft defintion](http://assembly.state.ny.us/leg/?default_fld=&bn=A02115&term=2015&Summary=Y&Actions=Y&Votes=Y&Memo=Y&Text=Y) - expands the defintion to include medical and health insurance information.
-* [A02118/S02685: Broadband Development Authority](http://assembly.state.ny.us/leg/?default_fld=&bn=A02118&term=2015&Summary=Y&Actions=Y&Votes=Y&Memo=Y&Text=Y) - creates an authority for the purposes of managing provider franchise agreements, requires several analyses and recommendations from the PSC, etc. Might overlap with A02751.
-* [A02671: Library collection management policies](http://assembly.state.ny.us/leg/?default_fld=&bn=A02671&term=2015&Summary=Y&Actions=Y&Votes=Y&Memo=Y&Text=Y) - requires libraries with collections of more than 100,000 items to develop and publish collection management policies.
-* [A02751: Broadband infrastructure](http://assembly.state.ny.us/leg/?default_fld=&bn=A02751&term=2015&Summary=Y&Actions=Y&Votes=Y&Memo=Y&Text=Y) - establishes a non-profit entity which fosters public/private partnerships for broadband delivery and measures development over time. Might overlap with A02118.
-* [A04066: Automobile Data](http://assembly.state.ny.us/leg/?default_fld=&bn=A04066&term=2015&Summary=Y&Actions=Y&Votes=Y&Memo=Y&Text=Y) - requires vehicle owners to be given access to diagnostic and other data which is already accessible to auto manufacturers and "authorized" repair services.
-* [A04083: Cyber Terrorism](http://assembly.state.ny.us/leg/?default_fld=&bn=A04083&term=2015&Summary=Y&Actions=Y&Votes=Y&Memo=Y&Text=Y) - expands cyber crimes definition and penalties to cover systematic, coordinated attacks.
-* [A04476: nitric acid sales](http://assembly.state.ny.us/leg/?default_fld=&bn=A04476&term=2015&Summary=Y&Actions=Y&Votes=Y&Memo=Y&Text=Y) - requires sellers to track buyers of nitric acid and makes it a class D felony to publish instructions on how to manufacture nitric acid-based explosives on the internet.
-* [A04601/S01762: posting insurance policies online](http://assembly.state.ny.us/leg/?default_fld=&bn=A04601&term=2015&Summary=Y&Actions=Y&Votes=Y&Memo=Y&Text=Y) - permits the posting of insurance policies and related materials on provider websites if they do not contain personally identifiable information.
-* [J00142: Health Information Technology Week](http://assembly.state.ny.us/leg/?default_fld=&bn=J00142&term=2015&Summary=Y&Actions=Y&Votes=Y&Memo=Y&Text=Y) - October 5-9, 2015 is proclaimed "Health Information Technology Week".
+  $( document ).ready(function() {
+    $.ajax("legislative-actions.csv", {
+      success: function(returnedData, textStatus, jqXHR) {
+        $.csv.toObjects(returnedData, {}, function(err, csvData) {
+          $("#actions-div").html('<span id="actions-count"></span><table id="actions-table" cellpadding="0" cellspacing="0" border="0" class="display" width="100%"></table>');
+          $("#actions-table").DataTable({
+            // "ajax": webUrl,   // loading data this way doesn't work. Maybe a jquery version compatability issue?
+            "data": csvData,
+            "paging": false,
+            "processing": true,  // only useful if DataTable's ajax handler is used
+            "order": [[1, "asc"]],
+            "columns": [
+              {"title": "Relevance", "data":"relevance", "width":"5%"},
+              {"title": "Identifier(s)", "render": function(data,type,full,meta){
+                if (full.link) { return '<a href="' full.link + '" target="_new">' + full.assemblyId + ' ' + full.senateId + ' ' + full.jointId + '</a>' }
+                  else { return full.assemblyId + ' ' + full.senateId + ' ' + full.jointId}
+              }, "width":"10%"},
+              {"title": "Subject(s)", "data": "subjects", "width": "10%"},
+              {"title": "Topic(s)", "data": "topics", "width": "15%"},
+              {"title": "Title", "data": "title", "width": "25%"},
+              {"title": "Notes", "data": "notes", "width": "40%"}
+            ]
+          });
+          $("#actions-count").text('Total items: ' + $("#actions-table").DataTable().rows()[0].length);
+        });
+      },
+      error: function(jqXHR, textStatus, errorThrown) {
+        alert("unable to load CSV data file: " + errorThrown);
+      }
+    });
+  });
+  
+</script>
