@@ -13,7 +13,7 @@ layout: default
 * [Open Book New York](http://www.openbooknewyork.com/) - state & local government spending, state contracts, state payments, public authority financials. Operated by the Office of the State Comptroller.
 * [New York Open Government](http://www.nyopengovernment.com/NYOG/) - campaign contributions & expenses, lobbyists & clients, charities, legislature member items, state corporations, elected officials, and legislature bills. Operated by the Office of the Attorney General.
 * [Project Sunlight](http://www.projectsunlight.ny.gov/) - publishes meetings and attendees between government officials and lobbyists.
-* [Open Senate](http://senate.ny.gov/open/) - access to bills, votes, and scheduled meetings undertaken by the legislature. Also provides a public API for developers. Operated by the Senate.
+* [Open Senate](http://www.nysenate.gov/open) - access to bills, votes, and scheduled meetings undertaken by the legislature. Also provides a public API for developers. Operated by the Senate.
 * Court / Law / Reports / Decisions (coming soon)
 * [Codified and Uncodified Laws of New York State](http://public.leginfo.state.ny.us/lawssrch.cgi?NVLWO:) - also provides access to activities in the legislature. Operated by the NYS Legislative Bill Drafting Commission.
 * [Committee on Open Government](http://www.dos.ny.gov/coog/) - principal source of information and legal opinions on matters related to Freedom of Information Law, Open Meetings Law, and Personal Privacy Protection Law.
@@ -27,5 +27,3 @@ More resources coming soon
 
 ## Additional resources
 * [Local Government Organizations](local-associations)
-
-
