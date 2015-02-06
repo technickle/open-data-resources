@@ -16,7 +16,9 @@ layout: default
 * [Open Senate](http://senate.ny.gov/open/) - access to bills, votes, and scheduled meetings undertaken by the legislature. Also provides a public API for developers. Operated by the Senate.
 * Court / Law / Reports / Decisions (coming soon)
 * [Codified and Uncodified Laws of New York State](http://public.leginfo.state.ny.us/lawssrch.cgi?NVLWO:) - also provides access to activities in the legislature. Operated by the NYS Legislative Bill Drafting Commission.
+* [Committee on Open Government](http://www.dos.ny.gov/coog/) - principal source of information and legal opinions on matters related to Freedom of Information Law, Open Meetings Law, and Personal Privacy Protection Law.
 More resources coming soon
+
 
 ## Policies, Guidance, and Related Information
 * [Executive Order 95](http://www.governor.ny.gov/news/no-95-using-technology-promote-transparency-improve-government-performance-and-enhance-citizen) - creates the Open New York (#OpenNY) program and defines a high-level governance model for publishing executive agency data.
