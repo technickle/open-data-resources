@@ -28,18 +28,14 @@ There are numerous statutes that govern how state records and data may or may no
             "processing": true,  // only useful if DataTable's ajax handler is used
             "order": [[1, "asc"]],
             "columns": [
-              {"title": "Source", "data": "Source", "width": "10%"},
+              {"title": "requires","data":"requires", "width": "10%"},
+              {"title": "Source", "data": "source", "width": "10%"},
               {"title": "Law", "data": "Law", "width": "35%", "render": function(data, type, full, meta){
-                if (full.Link) { return '<a href="' + full.Link + '" target="_new">' + full.Law + ' ' + full.Section + '</a>' }
-                  else { return full.Law + ' ' + full.Section }
+                if (full.Link) { return '<a href="' + full.link + '" target="_new">' + full.law + ' ' + full.section + '</a>' }
+                  else { return full.law + ' ' + full.section }
               }},
-              {"title": "Description", "data":"Description", "width": "40%"},
-              {"title": "Notes", "data": "Notes", "width": "20%"}
-  
-              //{"title":"Title", "data": "title", "render": function(data, type, full, meta){
-              //  if (full.landingPage) { return '<a href="' + full.landingPage + '" target="_new">' + data + '</a>'}
-              //    else {return data}
-              //  }},
+              {"title": "Description", "data":"description", "width": "35%"},
+              {"title": "Notes", "data": "notes", "width": "15%"}
             ]
           });
           $("#laws_count").text('Total items: ' + $("#laws-table").DataTable().rows()[0].length);
@@ -48,8 +44,6 @@ There are numerous statutes that govern how state records and data may or may no
       error: function(jqXHR, textStatus, errorThrown) {
         alert("unable to load CSV data file: " + errorThrown);
       }
-          
-          
     });
   });
   
