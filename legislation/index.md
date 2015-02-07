@@ -36,10 +36,13 @@ This is not intended to be an exhaustive list - for example, it does not list ST
               // {"title": "Topic(s)", "data": "topics", "width": "15%"},
               {"title": "Title", "render": function(data,type,full,meta) {
                 returnHtml = full.title;
-                identifiers = [full.assemblyId, full.senateId, full.jointId].join(" / ");
-                //idString = full.assemblyId + " " + full.senateId + " " + full.jointId;
-                if (full.link) {returnHtml+= ' (<a href="' + full.link + '" target="_new">' + identifiers + '</a>)'}
-                  else { returnHtml+= ' (' + identifiers + ')' }
+                identifiers = [];
+                if (full.assemblyId !== "") {identifiers.push(full.assemblyId)}
+                if (full.senateId !== "") {identifiers.push(full.senateId)}
+                if (full.jointId !== "") {identifiers.push(full.jointId)}
+                identifierText = identifiers.join(" / ");
+                if (full.link) {returnHtml+= ' (<a href="' + full.link + '" target="_new">' + identifierText + '</a>)'}
+                  else { returnHtml+= ' (' + identifierText + ')' }
                 return returnHtml;
               }},
               {"title": "Notes", "data": "notes" /**, "width": "40%" **/}
