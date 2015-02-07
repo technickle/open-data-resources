@@ -44,7 +44,7 @@ This is not intended to be an exhaustive list - for example, it does not list ST
               // }, "width":"10%"},
               // {"title": "Subject(s)", "data": "subjects", "width": "10%"},
               // {"title": "Topic(s)", "data": "topics", "width": "15%"},
-              {"title": "Title", "data": "title},
+              {"title": "Title", "data": "title"},
               {"title": "Notes", "data": "notes" /**, "width": "40%" **/}
             ]
           });
