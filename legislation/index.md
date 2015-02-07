@@ -24,7 +24,7 @@ This is not intended to be an exhaustive list - for example, it does not list ST
             data: csvData,
             paging: false,
             processing: true,  // only useful if DataTable's ajax handler is used
-            order: [[1, "asc"]],
+            order: [[0, "asc"]],
             columns: [
               {title: "Bill(s)", render: function(data,type,full,meta) {
                 identifiers = [];
