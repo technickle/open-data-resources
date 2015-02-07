@@ -35,9 +35,10 @@ This is not intended to be an exhaustive list - for example, it does not list ST
               // {"title": "Subject(s)", "data": "subjects", "width": "10%"},
               // {"title": "Topic(s)", "data": "topics", "width": "15%"},
               {"title": "Title", "render": function(data,type,full,meta) {
-                returnHtml = full.title
-                if (full.link) {returnHtml+= '<a href="' + full.link + '" target="_new">' + full.assemblyId + ' ' + full.senateId + ' ' + full.jointId + '</a>'}
-                  else { returnHrml+= full.assemblyId + ' ' + full.senateId + ' ' + full.jointId }
+                returnHtml = full.title;
+                idString = full.assemblyId + " " + full.senateId + " " + full.jointId;
+                if (full.link) {returnHtml+= ' (<a href="' + full.link + '" target="_new">' + idString + '</a>)'}
+                  else { returnHtml+= ' (' + idString + ')' }
                 return returnHtml;
               }},
               {"title": "Notes", "data": "notes" /**, "width": "40%" **/}
