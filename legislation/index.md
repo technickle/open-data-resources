@@ -26,6 +26,16 @@ This is not intended to be an exhaustive list - for example, it does not list ST
             "processing": true,  // only useful if DataTable's ajax handler is used
             "order": [[1, "asc"]],
             "columns": [
+              {"title": "Bill(s)", render: function(data,type,full,meta) {
+                identifiers = [];
+                if (full.assemblyId !== "") {identifiers.push(full.assemblyId)}
+                if (full.senateId !== "") {identifiers.push(full.senateId)}
+                if (full.jointId !== "") {identifiers.push(full.jointId)}
+                identifierText = identifiers.join(" / ");
+                if (full.link) {return  '<a href="' + full.link + '" target="_new">' + identifierText + '</a>'}
+                  else { return identifierText }
+                return returnHtml;
+              }},
               // {"className": "details-control", "orderable": "false", "data": null, "defaultContent": ""},
               // {"title": "Relevance", "data":"relevance", "width":"5%"},
               // {"title": "Identifier(s)", "render": function(data,type,full,meta){
@@ -34,17 +44,7 @@ This is not intended to be an exhaustive list - for example, it does not list ST
               // }, "width":"10%"},
               // {"title": "Subject(s)", "data": "subjects", "width": "10%"},
               // {"title": "Topic(s)", "data": "topics", "width": "15%"},
-              {"title": "Title", "render": function(data,type,full,meta) {
-                returnHtml = full.title;
-                identifiers = [];
-                if (full.assemblyId !== "") {identifiers.push(full.assemblyId)}
-                if (full.senateId !== "") {identifiers.push(full.senateId)}
-                if (full.jointId !== "") {identifiers.push(full.jointId)}
-                identifierText = identifiers.join(" / ");
-                if (full.link) {returnHtml+= ' (<a href="' + full.link + '" target="_new">' + identifierText + '</a>)'}
-                  else { returnHtml+= ' (' + identifierText + ')' }
-                return returnHtml;
-              }},
+              {"title": "Title", "data": "title},
               {"title": "Notes", "data": "notes" /**, "width": "40%" **/}
             ]
           });
