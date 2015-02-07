@@ -35,17 +35,9 @@ This is not intended to be an exhaustive list - for example, it does not list ST
                 if (full.link) {return  '<a href="' + full.link + '" target="_new">' + identifierText + '</a>'}
                   else { return identifierText }
                 return returnHtml;
-              }},
-              // {"className": "details-control", "orderable": "false", "data": null, "defaultContent": ""},
-              // {"title": "Relevance", "data":"relevance", "width":"5%"},
-              // {"title": "Identifier(s)", "render": function(data,type,full,meta){
-              //  if (full.link) { return '<a href="' + full.link + '" target="_new">' + full.assemblyId + ' ' + full.senateId + ' ' + full.jointId + '</a>' }
-              //    else { return full.assemblyId + ' ' + full.senateId + ' ' + full.jointId}
-              // }, "width":"10%"},
-              // {"title": "Subject(s)", "data": "subjects", "width": "10%"},
-              // {"title": "Topic(s)", "data": "topics", "width": "15%"},
-              {"title": "Title", "data": "title"},
-              {"title": "Notes", "data": "notes" /**, "width": "40%" **/}
+              }, width:"10%"},
+              {"title": "Title", "data": "title", width: "45%"},
+              {"title": "Notes", "data": "notes", width: "45%"}
             ]
           });
           $("#actions-count").text('Total items: ' + $("#actions-table").DataTable().rows()[0].length);
