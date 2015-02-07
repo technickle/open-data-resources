@@ -39,7 +39,7 @@ This is not intended to be an exhaustive list - for example, it does not list ST
                 if (full.link) {returnHtml+= '<a href="' + full.link + '" target="_new">' + full.assemblyId + ' ' + full.senateId + ' ' + full.jointId + '</a>'}
                   else { returnHrml+= full.assemblyId + ' ' + full.senateId + ' ' + full.jointId }
                 return returnHtml;
-              }
+              }},
               {"title": "Notes", "data": "notes" /**, "width": "40%" **/}
             ]
           });
