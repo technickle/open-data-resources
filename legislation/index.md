@@ -26,7 +26,7 @@ This is not intended to be an exhaustive list - for example, it does not list ST
             "processing": true,  // only useful if DataTable's ajax handler is used
             "order": [[1, "asc"]],
             "columns": [
-              {"className": "details-control", "orderable": "false", "data": null, "defaultContent": ""},
+              // {"className": "details-control", "orderable": "false", "data": null, "defaultContent": ""},
               // {"title": "Relevance", "data":"relevance", "width":"5%"},
               // {"title": "Identifier(s)", "render": function(data,type,full,meta){
               //  if (full.link) { return '<a href="' + full.link + '" target="_new">' + full.assemblyId + ' ' + full.senateId + ' ' + full.jointId + '</a>' }
@@ -36,9 +36,10 @@ This is not intended to be an exhaustive list - for example, it does not list ST
               // {"title": "Topic(s)", "data": "topics", "width": "15%"},
               {"title": "Title", "render": function(data,type,full,meta) {
                 returnHtml = full.title;
-                idString = full.assemblyId + " " + full.senateId + " " + full.jointId;
-                if (full.link) {returnHtml+= ' (<a href="' + full.link + '" target="_new">' + idString + '</a>)'}
-                  else { returnHtml+= ' (' + idString + ')' }
+                identifiers = [full.assemblyId, full.senateId, full.jointId].join(" / ");
+                //idString = full.assemblyId + " " + full.senateId + " " + full.jointId;
+                if (full.link) {returnHtml+= ' (<a href="' + full.link + '" target="_new">' + identifiers + '</a>)'}
+                  else { returnHtml+= ' (' + identifiers + ')' }
                 return returnHtml;
               }},
               {"title": "Notes", "data": "notes" /**, "width": "40%" **/}
