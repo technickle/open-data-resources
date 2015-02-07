@@ -21,12 +21,12 @@ This is not intended to be an exhaustive list - for example, it does not list ST
           $("#actions-div").html('<span id="actions-count"></span><table id="actions-table" cellpadding="0" cellspacing="0" border="0" class="display" width="100%"></table>');
           $("#actions-table").DataTable({
             // "ajax": webUrl,   // loading data this way doesn't work. Maybe a jquery version compatability issue?
-            "data": csvData,
-            "paging": false,
-            "processing": true,  // only useful if DataTable's ajax handler is used
-            "order": [[1, "asc"]],
-            "columns": [
-              {"title": "Bill(s)", render: function(data,type,full,meta) {
+            data: csvData,
+            paging: false,
+            processing: true,  // only useful if DataTable's ajax handler is used
+            order: [[1, "asc"]],
+            columns: [
+              {title: "Bill(s)", render: function(data,type,full,meta) {
                 identifiers = [];
                 if (full.assemblyId !== "") {identifiers.push(full.assemblyId)}
                 if (full.senateId !== "") {identifiers.push(full.senateId)}
@@ -36,8 +36,8 @@ This is not intended to be an exhaustive list - for example, it does not list ST
                   else { return identifierText }
                 return returnHtml;
               }, width:"10%"},
-              {"title": "Title", "data": "title", width: "45%"},
-              {"title": "Notes", "data": "notes", width: "45%"}
+              {title: "Title", data: "title", width: "30%"},
+              {title: "Notes", data: "notes", width: "60%"}
             ]
           });
           $("#actions-count").text('Total items: ' + $("#actions-table").DataTable().rows()[0].length);
