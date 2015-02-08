@@ -3,8 +3,11 @@ layout: default
 ---
 
 <div class="row">
+
 # Local Associations
+
   <div class="col-md-6">
+
 ## Statewide Membership Organizations with Broad Functions
 
 * [NYS City/County Management Association](http://www.nyscma.govoffice.com/) ([ICMA](http://icma.org/) affiliate)
