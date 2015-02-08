@@ -4,7 +4,7 @@ layout: default
 
 <div class="row">
   <div class="col-md-4">
-    <div class="thumbnail">
+    <div class="thumbnail col-md-4">
       <img src="#" alt="#">
       <div class="caption">
         <h3>Resources</h3>
