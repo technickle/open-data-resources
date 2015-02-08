@@ -13,7 +13,8 @@ Below is a list of bills being considered by the legislature. This is not intend
     Bills under consideration<span id="actions-count"></span>
     <span class="pull-right"><a href="{{site.baseIrl}}/bills/{{page.bills_file}}"><img src="https://raw.githubusercontent.com/BetaNYC/getDataButton/master/png/80x15.png" alt="download raw data"></a></span>
   </div>
-  <div class="panel-body" id="actions-div"></div>
+
+  <div id="actions-div"></div>
 </div>
 
 <script type="text/javascript" src="//cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
