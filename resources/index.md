@@ -7,7 +7,7 @@ layout: default
 
 <div class="list-group">
   <a class="list-group-item" href="https://data.ny.gov">
-    <h4>data.ny.gov <small class="label label-default">Operated by ITS on behalf of the Executive Chamber</small></h4>
+    <h4>data.ny.gov <small class="label">Operated by ITS on behalf of the Executive Chamber</small></h4>
     <p>Contains data from state agencies, authorities, etc, within the executive branch, including Health Data NY.</p>
   </a>
   <a class="list-group-item" href="https://health.data.ny.gov">
