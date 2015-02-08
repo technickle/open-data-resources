@@ -12,6 +12,8 @@ layout: default
         <p><a href="{{site.baseUrl}}/resources" class="btn btn-primary" role="button">View</a></p>
       </div>
     </div>
+  <div class="col-sm-6 col-md-4">
+  </div>
     <div class="thumbnail">
       <img src="#" alt="#">
       <div class="caption">
@@ -20,6 +22,8 @@ layout: default
         <p><a href="{{site.baseUrl}}/laws" class="btn btn-primary" role="button">View</a></p>
       </div>
     </div>
+  <div class="col-sm-6 col-md-4">
+  </div>
     <div class="thumbnail">
       <img src="#" alt="#">
       <div class="caption">
