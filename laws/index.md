@@ -50,7 +50,6 @@ redirect_from: enacted-laws/
               }},
               {title: "Description", data:"description"},
               {title: "Requirement(s)", data:"requires"},
-              {title: "Notes", data: "notes"}
             ]
           });
           $("#laws-count").text(': ' + $("#laws-table").DataTable().rows()[0].length);
