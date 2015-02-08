@@ -2,7 +2,6 @@
 layout: default
 ---
 
-<div class="row">
   <div class="col-md-4 col-sm-6">
     <div class="thumbnail">
       <img src="#" alt="#">
@@ -33,4 +32,3 @@ layout: default
       </div>
     </div>
   </div>
-</div>
