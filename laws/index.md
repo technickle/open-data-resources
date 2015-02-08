@@ -1,9 +1,5 @@
 ---
 layout: default
-redirect_from:
-  - ../enacted-laws
-  - ../enacted-laws/
-  - ../enacted-laws/index.html
 laws-file: laws.csv
 ---
 
@@ -11,7 +7,7 @@ laws-file: laws.csv
 
 See also: [pending legislative actions]({{ site.baseUrl }}/bills)
 
-There are numerous statutes that govern how state records and data may or may not be used. Some confer confidentiality by exempting particular records from disclosure. Others mandate fully public online reporting.  Due to recent changes to the state's [legislative information site](http://public.leginfo.state.ny.us/lawssrch.cgi?NVLWO:), the links below are currently not working correctly. Below are references to SOME of the records and statutes, provided for informational purposes only.  ([Download as raw data]({{page.laws-file}})).
+There are numerous statutes that govern how state records and data may or may not be used. Some confer confidentiality by exempting particular records from disclosure. Others mandate fully public online reporting.  Due to recent changes to the state's [legislative information site](http://public.leginfo.state.ny.us/lawssrch.cgi?NVLWO:), the links below are currently not working correctly. Below are references to SOME of the records and statutes, provided for informational purposes only.  ([Download as raw data]({{site.baseUrl}}/laws/{{page.laws-file}})).
 
 <div id="laws-div"></div>
 
@@ -23,7 +19,7 @@ There are numerous statutes that govern how state records and data may or may no
 <script type="text/javascript">
 
   $( document ).ready(function() {
-    $.ajax("{{page.laws-file}}", {
+    $.ajax("{{site.baseUrl}}/laws/{{page.laws-file}}", {
       success: function(returnedData, textStatus, jqXHR) {
         $.csv.toObjects(returnedData, {}, function(err, csvData) {
           $("#laws-div").html('<span id="laws_count"></span><table id="laws-table" cellpadding="0" cellspacing="0" border="0" class="display" width="100%"></table>');
