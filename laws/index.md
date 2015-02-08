@@ -10,7 +10,7 @@ redirect_from: enacted-laws/
 <div class="alert alert-danger">
   <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
   <span class="sr-only">Note:</span>
-  Due to recent changes to the state's <a href="http://public.leginfo.state.ny.us/lawssrch.cgi?NVLWO:">legislative information site</a>, the links below are currently not working correctly. 
+  Due to recent changes to the state's <a href="http://public.leginfo.state.ny.us/lawssrch.cgi?NVLWO:">legislative information site</a>, many of the links below are currently not working correctly. 
 </div>
 
 <div class="panel panel-default">
