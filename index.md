@@ -3,8 +3,8 @@ layout: default
 ---
 
 <div class="row">
-  <div class="col-md-4">
-    <div class="thumbnail col-md-4">
+  <div class="col-md-4 col-sm-6">
+    <div class="thumbnail">
       <img src="#" alt="#">
       <div class="caption">
         <h3>Resources</h3>
@@ -12,7 +12,7 @@ layout: default
         <p><a href="{{site.baseUrl}}/resources" class="btn btn-primary" role="button">View</a></p>
       </div>
     </div>
-  <div class="col-md-4">
+  <div class="col-md-4 col-sm-6">
   </div>
     <div class="thumbnail">
       <img src="#" alt="#">
@@ -22,7 +22,7 @@ layout: default
         <p><a href="{{site.baseUrl}}/laws" class="btn btn-primary" role="button">View</a></p>
       </div>
     </div>
-  <div class="col-md-4">
+  <div class="col-md-4 col-sm-6">
   </div>
     <div class="thumbnail">
       <img src="#" alt="#">
