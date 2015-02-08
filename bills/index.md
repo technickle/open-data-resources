@@ -4,10 +4,8 @@ bills_file: bills.csv
 redirect_from: legislation/
 ---
 
- <small>See also [laws]({{site.baseUrl}}/laws)</small>
-
-Below is a list of bills being considered by the legislature. This is not intended to be an exhaustive list - for example, it does not list STEM education items.
-
+<h3>Laws<small>See also [laws]({{site.baseUrl}}/laws)</small></h3>
+<p>Below is a list of bills being considered by the legislature. This is not intended to be an exhaustive list - for example, it does not list STEM education items.</p>
 <div class="panel panel-default">
   <div class="panel-heading">
     Bills under consideration<span id="actions-count"></span>
