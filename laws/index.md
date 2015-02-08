@@ -28,7 +28,7 @@ There are numerous statutes that govern how state records and data may or may no
             "data": csvData,
             "paging": false,
             "processing": true,  // only useful if DataTable's ajax handler is used
-            "order": [[2, "asc"]],
+            "order": [[1,"asc"],[2, "asc"]],
             "columns": [
               {"title": "Requirement(s)","data":"requires", "width": "10%"},
               {"title": "Source", "data": "source", "width": "10%"},
