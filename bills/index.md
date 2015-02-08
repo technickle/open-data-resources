@@ -9,9 +9,8 @@ redirect_from: legislation/
 Below is a list of bills being considered by the legislature. This is not intended to be an exhaustive list - for example, it does not list STEM education items.
 
 <div class="panel panel-default">
-  <div class="panel-heading">
-    Bills being considered by the legislature
-    <span id="actions-count"></span>
+  <div class="panel-heading"><h3 class="panel-title">
+    Bills under consideration<span id="actions-count"></span></h3>
     <span class="pull-right"><a href="{{site.baseIrl}}/bills/{{page.bills_file}}"><img src="https://raw.githubusercontent.com/BetaNYC/getDataButton/master/png/80x15.png" alt="download raw data"></a></span>
   </div>
   <div class="panel-body" id="actions-div"></div>
