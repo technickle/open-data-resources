@@ -16,6 +16,7 @@ layout: default
 
 ## Statewide Organizations for Specific Government Functions
 
+* [NYS Local Government Information Technology Directors Association](http://www.nyslgitda.org/)
 * [Association of Fire Districts of the State of New York](http://www.firedistnys.com/)
 * [NYS Assessors' Association](http://www.nyassessor.com/)
 * [NYS Association of Magistrates Court Clerks, Inc.](http://www.nysamcc.com/)
