@@ -5,7 +5,9 @@ redirect_from: enacted-laws/
 ---
 
 <h3>Laws <small>(See also <a href="{{site.baseUrl}}/bills">bills</a>)</small></h3>
-<p>There are numerous statutes that govern how state records and data may or may not be used. Some confer confidentiality by exempting particular records from disclosure. Others mandate fully public online reporting.  Due to recent changes to the state's <a href="http://public.leginfo.state.ny.us/lawssrch.cgi?NVLWO:">legislative information site</a>, the links below are currently not working correctly. Below are references to SOME of the records and statutes, provided for informational purposes only.</p>
+<p>There are numerous statutes that govern how state records and data may or may not be used. Some confer confidentiality by exempting particular records from disclosure. Others mandate fully public online reporting.</p>
+
+<div class="alert alert-error">Due to recent changes to the state's <a href="http://public.leginfo.state.ny.us/lawssrch.cgi?NVLWO:">legislative information site</a>, the links below are currently not working correctly. Below are references to SOME of the records and statutes, provided for informational purposes only.</div>
 
 <div class="panel panel-default">
   <div class="panel-heading">
