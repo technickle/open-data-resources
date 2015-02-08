@@ -4,12 +4,12 @@ layout: default
 
 ## Legislative actions related to technology, data, reporting and/or transparency
 
-This is not intended to be an exhaustive list - for example, it does not list STEM education items. See also [enacted laws](../enacted-laws) for laws which are already in effect. ([Download as raw data](legislative-actions.csv))
+This is not intended to be an exhaustive list - for example, it does not list STEM education items. See also [enacted laws]({{ site.baseUrl}}/enacted-laws) for laws which are already in effect. ([Download as raw data](legislative-actions.csv))
 
 <div id="actions-div"></div>
 <script type="text/javascript" src="//code.jquery.com/jquery-2.1.3.min.js"></script>
 <script type="text/javascript" src="//cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="../js/jquery-csv.0.71.js"></script>
+<script type="text/javascript" src="{{ site.baseUrl}}/js/jquery-csv.0.71.js"></script>
 <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.4/css/jquery.dataTables.min.css">
 
 <script type="text/javascript">
