@@ -17,7 +17,7 @@ layout: default
     <h3>NYS Assessors' Association</h3>
     <p>Aims to improve the standards of assessment practice; provide a clearing house for the collection and distribution of useful information relating to the assessment of real property; educate the taxpaying public on the nature and importance of the work performed by assessing officers; engage in research and improve assessment technique and practice; sponsor legislative proposals relating to assessing and taxation; cooperate with other agencies interested in the improvement of tax administration; and promote equity in the distribution of the real property tax.</p>
   </a>
-</diiv>  
+</div>  
   
 * [NYS Association of City and Village Clerks](http://www.nysclerks.com/)
 * [NYS Association of Counties](http://www.nysac.org/)
