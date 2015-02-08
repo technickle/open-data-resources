@@ -1,3 +1,8 @@
+---
+layout: default
+---
+
+
 ## Data & Transparency Resources
 * [Open Data Portal](https://data.ny.gov/) - contains data from state agencies, authorities, etc, within the executive branch (including the [Health Data Portal](https://health.data.ny.gov/)). Operated by ITS on behalf of the Executive Chamber.
 * [OpenBudget Portal](http://openbudget.ny.gov/) - contains state budget data, including fiscal plans, appropriations, capital appropriates, school aid appropriations, and a 60-year historical archive. Operated by ITS on behalf of the Division of the Budget and the Executive Chamber.
