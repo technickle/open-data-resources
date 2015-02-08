@@ -3,17 +3,16 @@ layout: default
 ---
 
 <div class="row">
-  <div class="col-sm-6 col-md-4">
+  <div class="col-md-4">
     <div class="thumbnail">
-      <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
-      <!--<img src="#" alt="#">-->
+      <img src="#" alt="#">
       <div class="caption">
         <h3>Resources</h3>
         <p>View a list of open government resources operated by the various branches of state government.</p>
         <p><a href="{{site.baseUrl}}/resources" class="btn btn-primary" role="button">View</a></p>
       </div>
     </div>
-  <div class="col-sm-6 col-md-4">
+  <div class="col-md-4">
   </div>
     <div class="thumbnail">
       <img src="#" alt="#">
@@ -23,7 +22,7 @@ layout: default
         <p><a href="{{site.baseUrl}}/laws" class="btn btn-primary" role="button">View</a></p>
       </div>
     </div>
-  <div class="col-sm-6 col-md-4">
+  <div class="col-md-4">
   </div>
     <div class="thumbnail">
       <img src="#" alt="#">
