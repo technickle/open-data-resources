@@ -11,7 +11,6 @@ There are numerous statutes that govern how state records and data may or may no
 
 <div id="laws-div"></div>
 
-<script type="text/javascript" src="//code.jquery.com/jquery-2.1.3.min.js"></script>
 <script type="text/javascript" src="//cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="{{ site.baseUrl }}/js/jquery-csv.0.71.js"></script>
 <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.4/css/jquery.dataTables.min.css">
