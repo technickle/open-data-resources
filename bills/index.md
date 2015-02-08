@@ -11,7 +11,7 @@ redirect_from: legislation/
     Bills under consideration<span id="actions-count"></span>
     <span class="pull-right"><a href="{{site.baseUrl}}/bills/{{page.bills_file}}"><img src="https://raw.githubusercontent.com/BetaNYC/getDataButton/master/png/80x15.png" alt="download raw data"></a></span>
   </div>
-
+  <div class="panel-body"></div>
   <div id="actions-div"></div>
 </div>
 
