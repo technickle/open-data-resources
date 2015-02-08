@@ -43,14 +43,14 @@ redirect_from: enacted-laws/
             processing: true,  // only useful if DataTable's ajax handler is used
             order: [[1,"asc"],[2, "asc"]],
             columns: [
-              {title: "Requirement(s)", data:"requires", width: "10%"},
-              {title: "Source", data: "source", width: "10%"},
-              {title: "Law", data: "Law", width: "35%", render: function(data, type, full, meta){
+              {title: "Requirement(s)", data:"requires"},
+              {title: "Source", data: "source"},
+              {title: "Law", data: "Law", render: function(data, type, full, meta){
                 if (full.link) { return '<a href="' + full.link + '" target="_new">' + full.law + ' ' + full.section + '</a>' }
                   else { return full.law + ' ' + full.section }
               }},
-              {title: "Description", data:"description", width: "35%"},
-              {title: "Notes", data: "notes", width: "15%"}
+              {title: "Description", data:"description"},
+              {title: "Notes", data: "notes"}
             ]
           });
           $("#laws-count").text(': ' + $("#laws-table").DataTable().rows()[0].length);
