@@ -6,11 +6,14 @@ redirect_from: legislation/
 
 ## Technology, data, reporting and/or disclosure bills <small>See also [laws]({{site.baseUrl}}/laws)</small>
 
-This is not intended to be an exhaustive list - for example, it does not list STEM education items.
-
 [<img src="https://raw.githubusercontent.com/BetaNYC/getDataButton/master/png/88x31.png" alt="download raw data">]({{site.baseUrl}}/bills/{{page.bills_file}})
 
-<div id="actions-div"></div>
+<div class="panel panel-default">
+  <div class="panel-heading">Bills being considered by the legislature</div>
+  <div class="panel-body">This is not intended to be an exhaustive list - for example, it does not list STEM education items.</div>
+  <div id="actions-div"></div>
+</div>
+
 <script type="text/javascript" src="//cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="{{ site.baseUrl}}/js/jquery-csv.0.71.js"></script>
 <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.4/css/jquery.dataTables.min.css">
