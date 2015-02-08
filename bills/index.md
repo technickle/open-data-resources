@@ -16,7 +16,7 @@ This is not intended to be an exhaustive list - for example, it does not list ST
 <script type="text/javascript">
 
   $( document ).ready(function() {
-    $.ajax("{{site.baseUrl}}/bills/{{page.bills_file}}', {
+    $.ajax("{{site.baseUrl}}/bills/{{page.bills_file}}", {
       success: function(returnedData, textStatus, jqXHR) {
         $.csv.toObjects(returnedData, {}, function(err, csvData) {
           $("#actions-div").html('<span id="actions-count"></span><table id="actions-table" cellpadding="0" cellspacing="0" border="0" class="display" width="100%"></table>');
