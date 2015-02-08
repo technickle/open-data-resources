@@ -1,6 +1,9 @@
 ---
 layout: default
 bills_file: bills.csv
+redirect_from:
+  - legislative-actions
+  - legislative-actions/
 ---
 
 ## Legislative actions related to technology, data, reporting and/or transparency
