@@ -2,8 +2,6 @@
 layout: default
 ---
 
-<div class="row">
-
 ## Laws that impact the use of state records and data
 
 See also: [pending legislative actions](../legislation)
