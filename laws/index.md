@@ -49,6 +49,7 @@ redirect_from: enacted-laws/
                   else { return full.law + ' ' + full.section }
               }},
               {title: "Description", data:"description"},
+              {title: "Note(s)", data:"notes"},
               {title: "Requirement(s)", data:"requires"},
             ]
           });
