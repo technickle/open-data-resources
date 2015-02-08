@@ -7,7 +7,7 @@ layout: default
 <div class="list-group">
   <a class="list-group-item" href="http://www.firedistnys.com/">
     <h3>Association of Fire Districts of the State of New York</h3>
-    <p>A not-for-profit corporation which works to improve the fiscal responsibility, efficiency and effectiveness of the fire district management through education, training and advocacy for commissioners and other fire district officials in the 57 counties outside of the City of New York.</p>
+    <p>Aims to improve the fiscal responsibility, efficiency and effectiveness of the fire district management through education, training and advocacy for commissioners and other fire district officials in the 57 counties outside of the City of New York.</p>
   </a>
   <a class="list-group-item" href="http://www.nypf.org/">
     <h3>NY Planning Federation</h3>
