@@ -18,9 +18,10 @@ Below is a list of bills being considered by the legislature. This is not intend
 </div>
 
 <script type="text/javascript" src="//cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="//cdn.datatables.net/responsive/1.0.3/js/dataTables.responsive.js"></script>
 <script type="text/javascript" src="{{ site.baseUrl}}/js/jquery-csv.0.71.js"></script>
 <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.4/css/jquery.dataTables.min.css">
-
+<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/responsive/1.0.3/css/dataTables.responsive.css">
 <script type="text/javascript">
 
   $( document ).ready(function() {
@@ -31,6 +32,7 @@ Below is a list of bills being considered by the legislature. This is not intend
           $("#actions-table").DataTable({
             // "ajax": webUrl,   // loading data this way doesn't work. Maybe a jquery version compatability issue?
             data: csvData,
+            responsive: true,
             paging: false,
             processing: true,  // only useful if DataTable's ajax handler is used
             order: [[0, "asc"]],
