@@ -43,7 +43,7 @@ redirect_from: enacted-laws/
               {"title": "Notes", "data": "notes", "width": "15%"}
             ]
           });
-          $("#laws_count").text(': ' + $("#laws-table").DataTable().rows()[0].length);
+          $("#laws-count").text(': ' + $("#laws-table").DataTable().rows()[0].length);
         });
       },
       error: function(jqXHR, textStatus, errorThrown) {
