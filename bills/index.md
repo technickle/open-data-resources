@@ -4,14 +4,14 @@ bills_file: bills.csv
 redirect_from: legislation/
 ---
 
-## Technology, data, reporting and/or disclosure bills <small>See also [laws]({{site.baseUrl}}/laws)</small>
+ <small>See also [laws]({{site.baseUrl}}/laws)</small>
 
 <div class="panel panel-default">
-  <div class="panel-heading">
-    Bills being considered by the legislature
+  <div class="panel-heading">Technology, data, reporting and/or disclosure bills<span id="actions-count"></span></div>
+  <div class="panel-body">
+    Below is a list of bills being considered by the legislature. This is not intended to be an exhaustive list - for example, it does not list STEM education items.
     <a href="{{site.baseIrl}}/bills/{{page.bills_file}}"><img src="https://raw.githubusercontent.com/BetaNYC/getDataButton/master/png/88x31.png" alt="download raw data"></a>
   </div>
-  <div class="panel-body">This is not intended to be an exhaustive list - for example, it does not list STEM education items.</div>
   <div id="actions-div"></div>
 </div>
 
@@ -25,7 +25,7 @@ redirect_from: legislation/
     $.ajax("{{site.baseUrl}}/bills/{{page.bills_file}}", {
       success: function(returnedData, textStatus, jqXHR) {
         $.csv.toObjects(returnedData, {}, function(err, csvData) {
-          $("#actions-div").html('<span id="actions-count"></span><table id="actions-table" cellpadding="0" cellspacing="0" border="0" class="display" width="100%"></table>');
+          $("#actions-div").html('<table id="actions-table" cellpadding="0" cellspacing="0" border="0" class="display" width="100%"></table>');
           $("#actions-table").DataTable({
             // "ajax": webUrl,   // loading data this way doesn't work. Maybe a jquery version compatability issue?
             data: csvData,
@@ -47,7 +47,7 @@ redirect_from: legislation/
               {title: "Notes", data: "notes", width: "60%"}
             ]
           });
-          $("#actions-count").text('Total items: ' + $("#actions-table").DataTable().rows()[0].length);
+          $("#actions-count").text(': ' + $("#actions-table").DataTable().rows()[0].length);
         });
       },
       error: function(jqXHR, textStatus, errorThrown) {
