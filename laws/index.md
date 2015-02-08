@@ -1,6 +1,7 @@
 ---
 layout: default
 laws-file: laws.csv
+redirect_from: enacted-laws/
 ---
 
 ## Laws that impact the use of state records and data
