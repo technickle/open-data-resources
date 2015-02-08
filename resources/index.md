@@ -75,14 +75,17 @@ layout: default
 
 <div class="list-group">
   <a class="list-group-item" href="http://www.governor.ny.gov/news/no-95-using-technology-promote-transparency-improve-government-performance-and-enhance-citizen">
+    <span class="badge">Executive Chamber</span>
     <h4>Executive Order 95</h4>
     <p>Creates the Open New York (#OpenNY) program and defines a high-level governance model for publishing executive agency data. Signed by Governor Andrew M. Cuomo on March 11, 2013.</p>
   </a>
   <a class="list-group-item" href="http://nys-its.github.io/open-data-handbook/">
+    <span class="badge">ITS</span>
     <h4>Open Data Handbook</h4>
     <p></p>
   </a>
   <a class="list-group-item" href="https://www.its.ny.gov/policy/NYS-P10-003.pdf">
+    <span class="badge">ITS</span>
     <h4>GIS Data Sharing Policy</h4>
     <p>(pdf document)</p>
   </a>
