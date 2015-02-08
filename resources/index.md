@@ -9,7 +9,7 @@ layout: default
   <a class="list-group-item" href="https://data.ny.gov">
     <h4>data.ny.gov</h4>
     <p>Contains data from state agencies, authorities, etc, within the executive branch, including Health Data NY.</p>
-    <small>operated by ITS, Executive Chamber</small>
+    <span class="badge">>operated by ITS, Executive Chamber</span>
   </a>
   <a class="list-group-item" href="https://health.data.ny.gov">
     <h4>Health Data NY</h4>
