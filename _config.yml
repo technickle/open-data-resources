@@ -1,1 +1,3 @@
 baseUrl: /open-data-resources
+gems:
+ - jekyll-redirect-from
