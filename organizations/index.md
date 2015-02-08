@@ -5,6 +5,7 @@ layout: default
 ## Statewide 
 
 * [Association of Fire Districts of the State of New York](http://www.firedistnys.com/)
+* [NY Planning Federation](http://www.nypf.org/)
 * [NYS Assessors' Association](http://www.nyassessor.com/)
 * [NYS Association of City and Village Clerks](http://www.nysclerks.com/)
 * [NYS Association of Counties](http://www.nysac.org/)
