@@ -8,8 +8,8 @@ layout: default
 <div class="list-group">
   <a class="list-group-item" href="https://data.ny.gov">
     <h4>data.ny.gov</h4>
-    <p>Contains data from state agencies, authorities, etc, within the executive branch, including Health Data NY.</p>
     <span class="badge">>operated by ITS, Executive Chamber</span>
+    <p>Contains data from state agencies, authorities, etc, within the executive branch, including Health Data NY.</p>
   </a>
   <a class="list-group-item" href="https://health.data.ny.gov">
     <h4>Health Data NY</h4>
