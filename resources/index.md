@@ -7,14 +7,14 @@ layout: default
 
 <div class="list-group">
   <a class="list-group-item" href="https://data.ny.gov">
-    <span class="badge">operated by ITS, Executive Chamber</span>
     <h4>data.ny.gov</h4>
+    <span class="badge">operated by ITS, Executive Chamber</span>
     <p>Contains data from state agencies, authorities, etc, within the executive branch, including Health Data NY.</p>
   </a>
   <a class="list-group-item" href="https://health.data.ny.gov">
     <h4>Health Data NY</h4>
+    <span class="badge">operated by DOH, ITS</span>
     <p>A repository of public reports and data on a broad variety of health programs and topics across the state.</p>
-    <small>operated by DOH, ITS</small>
   </a>
   <a class="list-group-item" href="http://openbudget.ny.gov">
     <h4>OpenBudget </h4>
