@@ -4,7 +4,7 @@ layout: default
 
 ## Laws that impact the use of state records and data
 
-See also: [pending legislative actions](../legislation)
+See also: [pending legislative actions]({{ site.baseUrl }}/legislation)
 
 There are numerous statutes that govern how state records and data may or may not be used. Some confer confidentiality by exempting particular records from disclosure. Others mandate fully public online reporting.  Due to recent changes to the state's [legislative information site](http://public.leginfo.state.ny.us/lawssrch.cgi?NVLWO:), the links below are currently not working correctly. Below are references to SOME of the records and statutes, provided for informational purposes only.  ([Download as raw data](enacted-laws.csv)).
 
