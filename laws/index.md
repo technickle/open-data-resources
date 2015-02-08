@@ -41,7 +41,7 @@ redirect_from: enacted-laws/
             responsive: true,
             paging: false,
             processing: true,  // only useful if DataTable's ajax handler is used
-            order: [[1,"asc"],[2, "asc"]],
+            order: [[0,"asc"]],
             columns: [
               // {title: "Source", data: "source"},
               {title: "Law", data: "Law", render: function(data, type, full, meta){
