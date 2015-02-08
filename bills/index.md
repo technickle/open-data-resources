@@ -1,6 +1,9 @@
 ---
 layout: default
-redirect_from: "/legislation"
+redirect_from: 
+  - /legislation
+  - /legislation/
+  - /legislation/index.html
 ---
 
 ## Legislative actions related to technology, data, reporting and/or transparency
