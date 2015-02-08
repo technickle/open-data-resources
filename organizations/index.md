@@ -2,12 +2,8 @@
 layout: default
 ---
 
-<div class="row">
-
 # Local Associations
 
-  <div class="col-md-6"><span>
-  
 ## Statewide Membership Organizations with Broad Functions
 
 * [NYS City/County Management Association](http://www.nyscma.govoffice.com/) ([ICMA](http://icma.org/) affiliate)
@@ -34,9 +30,6 @@ layout: default
 * [NYS Society of Municipal Finance Officers](http://www.nysmunicipalfinanceofficers.org/)
 * [State Association of Municipal Purchasing Officers (SAMPO)](http://www.nysampo.org/)
 
-  </span></div>
-  <div class="col-md-6"><span>
-
 ## Regional Organizations
 
 * [Cornell Local Roads Program](http://www.clrp.cornell.edu/index.htm)
@@ -47,7 +40,3 @@ layout: default
 * [Southern Tier East Regional Planning & Development Board](http://www.steny.org/)
 * [Southern Tier West Regional Planning & Development Board](http://www.southerntierwest.org/)
 * [Tug Hill Commission](http://www.tughill.org/)
-
-  </span></div>
-
-</div>
