@@ -4,7 +4,14 @@ layout: default
 
 
 ## Open Government Resources
-* [data.ny.gov](https://data.ny.gov/) - contains data from state agencies, authorities, etc, within the executive branch (including [Health Data NY](https://health.data.ny.gov/)). Operated by ITS on behalf of the Executive Chamber.
+
+<div class="list-group">
+  <a href="https://data.ny.gov">
+    <h4>data.ny.gov</h4>
+    <p>Contains data from state agencies, authorities, etc, within the executive branch (including Health Data NY. Operated by ITS on behalf of the Executive Chamber.</p>
+  </a>
+</div>
+
 * [Health Data NY](https://health.data.ny.gov)
 * [OpenBudget](http://openbudget.ny.gov/) - contains state budget data, including fiscal plans, appropriations, capital appropriates, school aid appropriations, and a 60-year historical archive. Operated by ITS on behalf of the Division of the Budget and the Executive Chamber.
 * [GIS Clearinghouse Data](http://gis.ny.gov/gisdata/) - contains a vast archive of geographic information, including a variety of vector data, digital orthoimagery, digital elevation maps, and more. Operated by ITS on behalf of the [statewide GIS advisory council](http://gis.ny.gov/coordinationprogram/workgroups/details/index.cfm?ID=10).
