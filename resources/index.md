@@ -19,7 +19,7 @@ layout: default
     <p>contains state budget data, including fiscal plans, appropriations, capital appropriates, school aid appropriations, and a 60-year historical archive.</p>
   </a>
   <a class="list-group-item" href="http://gis.ny.gov/gisdata/">
-    <h4>GIS Clearinghouse (data) <small>- operated by ITS on behalf of the <a href="http://gis.ny.gov/coordinationprogram/workgroups/details/index.cfm?ID=10">statewide GIS advisory council</a></small></h4>
+    <h4>GIS Clearinghouse (data) <small>- operated by ITS on behalf of the statewide GIS advisory council</small></h4>
     <p>contains a vast archive of geographic information, including a variety of vector data, digital orthoimagery, digital elevation maps, and more. </p>
   </a>
   <a class="list-group-item" href="http://www.openbooknewyork.com/">
