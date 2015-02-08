@@ -9,7 +9,7 @@ redirect_from: enacted-laws/
 
 <div class="panel panel-default">
   <div class="panel-heading">
-    Bills under consideration<span id="actions-count"></span>
+    Bills under consideration<span id="laws-count"></span>
     <span class="pull-right"><a href="{{site.baseUrl}}/laws/{{page.laws_file}}"><img src="https://raw.githubusercontent.com/BetaNYC/getDataButton/master/png/80x15.png" alt="download raw data"></a></span>
   </div>
   <div id="laws-div"></div>
@@ -25,7 +25,7 @@ redirect_from: enacted-laws/
     $.ajax("{{site.baseUrl}}/laws/{{page.laws-file}}", {
       success: function(returnedData, textStatus, jqXHR) {
         $.csv.toObjects(returnedData, {}, function(err, csvData) {
-          $("#laws-div").html('<span id="laws_count"></span><table id="laws-table" cellpadding="0" cellspacing="0" border="0" class="display" width="100%"></table>');
+          $("#laws-div").html('<table id="laws-table" cellpadding="0" cellspacing="0" border="0" class="display" width="100%"></table>');
           $("#laws-table").DataTable({
             // "ajax": webUrl,   // loading data this way doesn't work. Maybe a jquery version compatability issue?
             "data": csvData,
