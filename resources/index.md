@@ -7,16 +7,16 @@ layout: default
 
 <div class="list-group">
   <a class="list-group-item" href="https://data.ny.gov">
-    <h4>data.ny.gov</h4>
-    <p>Contains data from state agencies, authorities, etc, within the executive branch (including Health Data NY. Operated by ITS on behalf of the Executive Chamber.</p>
+    <h4>data.ny.gov <small>Operated by ITS on behalf of the Executive Chamber</small></h4>
+    <p>Contains data from state agencies, authorities, etc, within the executive branch, including Health Data NY.</p>
   </a>
   <a class="list-group-item" href="https://health.data.ny.gov">
-    <h4>Health Data NY</h4>
-    <p>Contains data from state agencies, authorities, etc, within the executive branch (including Health Data NY. Operated by ITS and the Department of Health.</p>
+    <h4>Health Data NY <small>Operated by ITS and DOH</small></h4>
+    <p></p>
   </a>
   <a class="list-group-item" href="http://openbudget.ny.gov">
-    <h4>OpenBudget</h4>
-    <p>contains state budget data, including fiscal plans, appropriations, capital appropriates, school aid appropriations, and a 60-year historical archive. Operated by ITS on behalf of the Division of the Budget and the Executive Chamber.</p>
+    <h4>OpenBudget <small>Operated by ITS on behalf of DOB and the Executive Chamber</small></h4>
+    <p>contains state budget data, including fiscal plans, appropriations, capital appropriates, school aid appropriations, and a 60-year historical archive.</p>
   </a>
   <a class="list-group-item" href="http://gis.ny.gov/gisdata/">
     <h4>GIS Clearinghouse (data)</h4>
