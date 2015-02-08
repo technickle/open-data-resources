@@ -6,14 +6,20 @@ layout: default
 ## Open Government Resources
 
 <div class="list-group">
-  <a href="https://data.ny.gov">
+  <a class="list-group-item" href="https://data.ny.gov">
     <h4>data.ny.gov</h4>
     <p>Contains data from state agencies, authorities, etc, within the executive branch (including Health Data NY. Operated by ITS on behalf of the Executive Chamber.</p>
   </a>
+  <a class="list-group-item" href="https://health.data.ny.gov">
+    <h4>Health Data NY</h4>
+    <p>Contains data from state agencies, authorities, etc, within the executive branch (including Health Data NY. Operated by ITS and the Department of Health.</p>
+  </a>
+  <a class="list-group-item" href="http://openbudget.ny.gov">
+    <h4>OpenBudget</h4>
+    <p>contains state budget data, including fiscal plans, appropriations, capital appropriates, school aid appropriations, and a 60-year historical archive. Operated by ITS on behalf of the Division of the Budget and the Executive Chamber.</p>
+  </a>
 </div>
 
-* [Health Data NY](https://health.data.ny.gov)
-* [OpenBudget](http://openbudget.ny.gov/) - contains state budget data, including fiscal plans, appropriations, capital appropriates, school aid appropriations, and a 60-year historical archive. Operated by ITS on behalf of the Division of the Budget and the Executive Chamber.
 * [GIS Clearinghouse Data](http://gis.ny.gov/gisdata/) - contains a vast archive of geographic information, including a variety of vector data, digital orthoimagery, digital elevation maps, and more. Operated by ITS on behalf of the [statewide GIS advisory council](http://gis.ny.gov/coordinationprogram/workgroups/details/index.cfm?ID=10).
 * [Open Book New York](http://www.openbooknewyork.com/) - state & local government spending, state contracts, state payments, public authority financials. Operated by the Office of the State Comptroller.
 * [New York Open Government](http://www.nyopengovernment.com/NYOG/) - campaign contributions & expenses, lobbyists & clients, charities, legislature member items, state corporations, elected officials, and legislature bills. Operated by the Office of the Attorney General.
