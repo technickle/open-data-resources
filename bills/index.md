@@ -1,14 +1,15 @@
 ---
 layout: default
 redirect_from: 
-  - /legislation
-  - /legislation/
-  - /legislation/index.html
+  - ../legislation
+  - ../legislation/
+  - ../legislation/index.html
+bills-file: bills.csv
 ---
 
 ## Legislative actions related to technology, data, reporting and/or transparency
 
-This is not intended to be an exhaustive list - for example, it does not list STEM education items. See also [enacted laws]({{ site.baseUrl}}/enacted-laws) for laws which are already in effect. ([Download as raw data](bills.csv))
+This is not intended to be an exhaustive list - for example, it does not list STEM education items. See also [enacted laws]({{ site.baseUrl}}/enacted-laws) for laws which are already in effect. ([Download as raw data]({{page.bills-file}}))
 
 <div id="actions-div"></div>
 <script type="text/javascript" src="//code.jquery.com/jquery-2.1.3.min.js"></script>
@@ -19,7 +20,7 @@ This is not intended to be an exhaustive list - for example, it does not list ST
 <script type="text/javascript">
 
   $( document ).ready(function() {
-    $.ajax("legislative-actions.csv", {
+    $.ajax("{{page.bills-file}}", {
       success: function(returnedData, textStatus, jqXHR) {
         $.csv.toObjects(returnedData, {}, function(err, csvData) {
           $("#actions-div").html('<span id="actions-count"></span><table id="actions-table" cellpadding="0" cellspacing="0" border="0" class="display" width="100%"></table>');
