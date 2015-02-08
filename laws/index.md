@@ -9,7 +9,7 @@ redirect_from: enacted-laws/
 
 <div class="panel panel-default">
   <div class="panel-heading">
-    Bills under consideration<span id="laws-count"></span>
+    Laws<span id="laws-count"></span>
     <span class="pull-right"><a href="{{site.baseUrl}}/laws/{{page.laws_file}}"><img src="https://raw.githubusercontent.com/BetaNYC/getDataButton/master/png/80x15.png" alt="download raw data"></a></span>
   </div>
   <div id="laws-div"></div>
@@ -43,7 +43,7 @@ redirect_from: enacted-laws/
               {"title": "Notes", "data": "notes", "width": "15%"}
             ]
           });
-          $("#laws_count").text('Total items: ' + $("#laws-table").DataTable().rows()[0].length);
+          $("#laws_count").text(': ' + $("#laws-table").DataTable().rows()[0].length);
         });
       },
       error: function(jqXHR, textStatus, errorThrown) {
