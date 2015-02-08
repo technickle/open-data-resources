@@ -1,9 +1,9 @@
 ---
 layout: default
 redirect_from:
-  - /enacted-laws
-  - /enacted-laws/
-  - /enacted-laws/index.html
+  - ../enacted-laws
+  - ../enacted-laws/
+  - ../enacted-laws/index.html
 laws-file: laws.csv
 ---
 
