@@ -4,7 +4,7 @@ bills_file: bills.csv
 redirect_from: legislation/
 ---
 
-## Legislative actions related to technology, data, reporting and/or transparency <small>See also [laws]({{site.baseUrl}}/laws)</small>
+## Technology, data, reporting and/or disclosure bills <small>See also [laws]({{site.baseUrl}}/laws)</small>
 
 This is not intended to be an exhaustive list - for example, it does not list STEM education items. ([Download as raw data]({{site.baseUrl}}/bills/{{page.bills_file}}))
 
