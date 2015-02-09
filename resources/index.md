@@ -16,50 +16,45 @@ layout: default
     <span class="badge">DOH</span>
     <span class="badge">ITS</span>
     <h4>Health Data NY</h4>
-    <p>A repository of public reports and data on a broad variety of health programs and topics across the state.</p>
+    <p>Holds public reports and data on a broad variety of health programs and topics across the state.</p>
   </a>
   <a class="list-group-item" href="http://openbudget.ny.gov">
     <span class="badge">DOB</span>
     <span class="badge">ITS</span>
     <span class="badge">Executive Chamber</span>
     <h4>OpenBudget </h4>
-    <p>contains state budget data, including fiscal plans, appropriations, capital appropriates, school aid appropriations, and a 60-year historical archive.</p>
+    <p>Presents state budget data, including fiscal plans, appropriations, capital appropriates, school aid appropriations, and a 60-year historical archive.</p>
   </a>
   <a class="list-group-item" href="http://gis.ny.gov/gisdata/">
     <span class="badge">ITS</span>
     <span class="badge">Geospatial Advisory Council</span>
     <h4>GIS Clearinghouse (data)</h4>
-    <p>contains a vast archive of geographic information, including a variety of vector data, digital orthoimagery, digital elevation maps, and more.</p>
+    <p>Contains a vast archive of geographic information, including a variety of vector data, digital orthoimagery, digital elevation maps, and more.</p>
   </a>
   <a class="list-group-item" href="http://www.openbooknewyork.com/">
      <span class="badge">Comptroller</span>
     <h4>Open Book New York</h4>
-    <p>state & local government spending, state contracts, state payments, public authority financials.</p>
+    <p>Shares state & local government spending, state contracts, state payments, public authority financials.</p>
   </a>
   <a class="list-group-item" href="http://www.nyopengovernment.com/NYOG/">
     <span class="badge">Attorney General</span>
     <h4>New York Open Government</h4>
-    <p>campaign contributions & expenses, lobbyists & clients, charities, legislature member items, state corporations, elected officials, and legislature bills.</p>
+    <p>Details campaign contributions & expenses, lobbyists & clients, charities, legislature member items, state corporations, elected officials, and legislature bills.</p>
   </a>
   <a class="list-group-item" href="http://www.projectsunlight.ny.gov/">
     <span class="badge">Executive Chamber</span>
     <h4>Project Sunlight</h4>
-    <p>publishes meetings and attendees between government officials and lobbyists.</p>
+    <p>Publishes meetings and attendees between government officials and lobbyists.</p>
   </a>
   <a class="list-group-item" href="http://www.nysenate.gov/open">
     <span class="badge">Senate</span>
     <h4>Open Senate</h4>
-    <p>access to bills, votes, and scheduled meetings undertaken by the legislature. Also provides a public API for developers.</p>
+    <p>Provides access to bills, votes, and scheduled meetings undertaken by the legislature. Also provides a public API for developers.</p>
   </a>
   <a class="list-group-item" href="http://public.leginfo.state.ny.us/lawssrch.cgi?NVLWO:">
     <span class="badge">Legislative Bill Drafting Commission</span>
     <h4>Codified and Uncodified Laws of New York State</h4>
     <p>Also provides access to activities in the legislature.</p>
-  </a>
-  <a class="list-group-item" href="http://www.dos.ny.gov/coog/">
-    <span class="badge">DOS</span>
-    <h4>Committee on Open Government</h4>
-    <p>principal source of information and legal opinions on matters related to Freedom of Information Law, Open Meetings Law, and Personal Privacy Protection Law.</p>
   </a>
   <span class="list-group-item">
     <span class="badge">Unified Court System</span>
@@ -83,6 +78,11 @@ layout: default
     <span class="badge">ITS</span>
     <h4>Open Data Handbook</h4>
     <p></p>
+  </a>
+  <a class="list-group-item" href="http://www.dos.ny.gov/coog/">
+    <span class="badge">DOS</span>
+    <h4>Committee on Open Government</h4>
+    <p>Principal source of information and legal opinions on matters related to Freedom of Information Law, Open Meetings Law, and Personal Privacy Protection Law.</p>
   </a>
   <a class="list-group-item" href="https://www.its.ny.gov/policy/NYS-P10-003.pdf">
     <span class="badge">ITS</span>
