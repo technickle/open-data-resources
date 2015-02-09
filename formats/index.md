@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Open Data Formats
 
 ## Comma-Separated Values (CSV)
