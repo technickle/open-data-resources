@@ -30,7 +30,7 @@ redirect_from: legislation/
           if (d.jointId !== "") {identifiers.push(d.jointId)}
           identifierText = identifiers.join(" / ");
           re = /\s*;\s*/;
-          return "<h4>"+ d.title + " (" + identifierText + ")</h4><span class='label label-default'>" + d.subjects + "; " + d.topics + "</span><p>" + d.notes + "</p>"
+          return "<h4>"+ d.title + " (" + identifierText + ")</h4><span class='badge'>" + d.subjects + "; " + d.topics + "</span><p>" + d.notes + "</p>"
         });
   });
 </script>
