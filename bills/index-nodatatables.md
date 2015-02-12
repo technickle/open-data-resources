@@ -18,7 +18,7 @@ redirect_from: legislation/
 <script>
   d3.csv("{{site.baseUrl}}/bills/{{page.bills_file}}", function(billData) {
     if (billData == undefined) { alert("Unable to load data"); return; }
-    d3.select(".bills-count").text = ": " + billData.length;
+    d3.select("#bills-count").text = ": " + billData.length;
     d3.select(".list-group").selectAll("a").data(billData)
       .enter().append("a")
         .attr("href", function(d) { return d.link })
