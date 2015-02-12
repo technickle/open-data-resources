@@ -22,13 +22,13 @@ redirect_from: legislation/
       .enter().append("a")
         .attr("href", function(d) { return d.link })
         .classed("list-group-item", true)
-        .text(function(d) {
+        .html(function(d) {
           identifiers = [];
           if (d.assemblyId !== "") {identifiers.push(d.assemblyId)}
           if (d.senateId !== "") {identifiers.push(d.senateId)}
           if (d.jointId !== "") {identifiers.push(d.jointId)}
           identifierText = identifiers.join(" / ");
-          return "<h4>"+ d.title + "(" + identifierText + ")</h4><p>" + d.description + "</p>"
+          return "<h4>"+ d.title + " (" + identifierText + ")</h4><p>" + d.notes + "</p>"
         });
   });
   
