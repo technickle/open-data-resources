@@ -11,17 +11,20 @@ redirect_from: legislation/
     Bills under consideration<span id="actions-count"></span>
     <span class="pull-right"><a href="{{site.baseUrl}}/bills/{{page.bills_file}}"><img src="https://raw.githubusercontent.com/BetaNYC/getDataButton/master/png/80x15.png" alt="download raw data"></a></span>
   </div>
-  <div class="panel-body"></div>
-  <div id="actions-div"></div>
+  <div class="list-group"></div>
 </div>
 
 <script type="text/javascript" src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script>
-  d3.csv("{{site.baseUrl}}/bills/{{page.bills_file}}", function(data) {
-    if (data == undefined) { alert("Unable to load data"); return; }
-    console.log(data)
+  d3.csv("{{site.baseUrl}}/bills/{{page.bills_file}}", function(billData) {
+    if (billData == undefined) { alert("Unable to load data"); return; }
+    d3.select(".list-group").selectAll("a").data(billData)
+      .enter().append("a")
+        .attr("href", function(d) { return d.link })
+        .classed("list-group-item", true)
+        .text(function(d) {return d.title})
   });
-
+  
 
   /**
   $( document ).ready(function() {
