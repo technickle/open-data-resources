@@ -8,7 +8,7 @@ redirect_from: legislation/
 <p>Below is a list of bills being considered by the legislature. This is not intended to be an exhaustive list - for example, it does not list STEM education items.</p>
 <div class="panel panel-default">
   <div class="panel-heading">
-    Bills under consideration<span id="actions-count"></span>
+    Bills under consideration<span id="bills-count"></span>
     <span class="pull-right"><a href="{{site.baseUrl}}/bills/{{page.bills_file}}"><img src="https://raw.githubusercontent.com/BetaNYC/getDataButton/master/png/80x15.png" alt="download raw data"></a></span>
   </div>
   <div class="list-group"></div>
@@ -18,6 +18,7 @@ redirect_from: legislation/
 <script>
   d3.csv("{{site.baseUrl}}/bills/{{page.bills_file}}", function(billData) {
     if (billData == undefined) { alert("Unable to load data"); return; }
+    d3.select(".bills-count").text = data.length();
     d3.select(".list-group").selectAll("a").data(billData)
       .enter().append("a")
         .attr("href", function(d) { return d.link })
