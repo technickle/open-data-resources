@@ -22,7 +22,14 @@ redirect_from: legislation/
       .enter().append("a")
         .attr("href", function(d) { return d.link })
         .classed("list-group-item", true)
-        .text(function(d) {return d.title})
+        .text(function(d) {
+          identifiers = [];
+          if (full.assemblyId !== "") {identifiers.push(full.assemblyId)}
+          if (full.senateId !== "") {identifiers.push(full.senateId)}
+          if (full.jointId !== "") {identifiers.push(full.jointId)}
+          identifierText = identifiers.join(" / ");
+          return "<h4>"+ d.title + "(" + identifierText + ")</h4><p>" + d.description + "</p>"
+        });
   });
   
 
