@@ -18,7 +18,8 @@ redirect_from: legislation/
 <script type="text/javascript" src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script>
   d3.csv("{{site.baseUrl}}/bills/{{page.bills_file}}", function(data) {
-    if (data == undefined) { alert("Unable to load data") }
+    if (data == undefined) { alert("Unable to load data"); return; }
+    console.log(data)
   });
 
 
