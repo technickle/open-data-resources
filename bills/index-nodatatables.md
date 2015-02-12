@@ -29,7 +29,8 @@ redirect_from: legislation/
           if (d.senateId !== "") {identifiers.push(d.senateId)}
           if (d.jointId !== "") {identifiers.push(d.jointId)}
           identifierText = identifiers.join(" / ");
-          return "<h4>"+ d.title + " (" + identifierText + ")</h4><p>" + d.notes + "</p>"
+          re = /\s*;\s*/;
+          return "<h4>"+ d.title + " (" + identifierText + ")</h4><span class='label label-default'>" + d.subjects + " " + d.topics + "</span><p>" + d.notes + "</p>"
         });
   });
 </script>
