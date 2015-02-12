@@ -24,9 +24,9 @@ redirect_from: legislation/
         .classed("list-group-item", true)
         .text(function(d) {
           identifiers = [];
-          if (full.assemblyId !== "") {identifiers.push(full.assemblyId)}
-          if (full.senateId !== "") {identifiers.push(full.senateId)}
-          if (full.jointId !== "") {identifiers.push(full.jointId)}
+          if (d.assemblyId !== "") {identifiers.push(d.assemblyId)}
+          if (d.senateId !== "") {identifiers.push(d.senateId)}
+          if (d.jointId !== "") {identifiers.push(d.jointId)}
           identifierText = identifiers.join(" / ");
           return "<h4>"+ d.title + "(" + identifierText + ")</h4><p>" + d.description + "</p>"
         });
