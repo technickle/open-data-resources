@@ -33,5 +33,6 @@ redirect_from: enacted-laws/
         .html(function(d) {
           return "<span class='badge'>" + d.requires + "</span><h4>" + d.law + " " + d.section + "</h4><p>" + d.description + "</p><p>" + d.notes + "</p>"
         }).order();
+    d3.select(".list-group").selectAll("a").sort(function(a,b) {return d3.ascending(a.law + " " + a.section, b.law + " " + b.section)});
   });
 </script>
