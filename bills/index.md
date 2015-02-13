@@ -24,13 +24,19 @@ redirect_from: legislation/
         .attr("href", function(d) { return d.link })
         .classed("list-group-item", true)
         .html(function(d) {
-          identifiers = [];
-          if (d.assemblyId !== "") {identifiers.push(d.assemblyId)}
-          if (d.senateId !== "") {identifiers.push(d.senateId)}
-          if (d.jointId !== "") {identifiers.push(d.jointId)}
-          identifierText = identifiers.join(" / ");
-          re = /\s*;\s*/;
-          return "<h4>"+ d.title + " (" + identifierText + ")</h4><span class='badge'>" + d.subjects + "; " + d.topics + "</span><p>" + d.notes + "</p>"
+          return "<h4>"+ d.title + " (" + getIdentifiers(d) + ")</h4><span class='badge'>" + d.subjects + "; " + d.topics + "</span><p>" + d.notes + "</p>"
         });
+    d3.select(".list-group").selectAll("a").sort(function(a,b) {
+      return d3.ascending(getIdentifiers(a), getIdentifiers(b));
+    });
   });
+  
+function getIdentifiers(d) {
+  identifiers = [];
+  if (d.assemblyId !== "") {identifiers.push(d.assemblyId)}
+  if (d.senateId !== "") {identifiers.push(d.senateId)}
+  if (d.jointId !== "") {identifiers.push(d.jointId)}
+  return identifiers.join(" / ");
+}
+  
 </script>
