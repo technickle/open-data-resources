@@ -32,6 +32,6 @@ redirect_from: enacted-laws/
         .classed("list-group-item", true)
         .html(function(d) {
           return "<span class='badge'>" + d.requires + "</span><h4>" + d.law + " " + d.section + "</h4><p>" + d.description + "</p><p>" + d.notes + "</p>"
-        });
+        }).order();
   });
 </script>
