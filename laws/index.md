@@ -31,7 +31,7 @@ redirect_from: enacted-laws/
         .attr("href", function(d) { return d.link })
         .classed("list-group-item", true)
         .html(function(d) {
-          return "<h4>" + d.description + " (" + d.law + " " + d.section + ")</h4><span class='badge'>" + d.requires + "</span><p>" + d.notes + "</p>"
+          return "<h4>" + d.law + " " + d.section + "</h4><span class='badge'>" + d.requires + "</span><p>" + d.description + "</p><p>" + d.notes + "</p>"
         });
   });
 </script>
