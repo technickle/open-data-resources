@@ -5,7 +5,7 @@ redirect_from: legislation/
 ---
 
 <h3>Bills <small>(See also <a href="{{site.baseUrl}}/laws">laws</a>)</small></h3>
-<p>Below is a list of bills being considered by the legislature. This is not intended to be an exhaustive list - for example, it does not list STEM education items.</p>
+<p>Below is a list of bills being considered by the legislature. This is not intended to be an exhaustive list - for example, it does not list STEM education items. A checkmark preceding the bill number indicates that it has passed a vote by that legislative body.</p>
 <div class="panel panel-default">
   <div class="panel-heading">
     Bills under consideration: <span id="bills-count">0</span>
