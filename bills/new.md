@@ -90,7 +90,7 @@ $( document ).ready( function() {
   if (localStorage.openStatesAPIKey === undefined) {
     showAPIKeyModal();
   } else {
-    d3.json("http://openstates.org/api/v1/bills?q=cyber&state=ny&updated_since=2015-01-01&type=bill&apikey=" + localStorage.openStatesAPIKey, function(error, billData){
+    d3.json("http://openstates.org/api/v1/bills/?q=cyber&state=ny&updated_since=2015-01-01&type=bill&apikey=" + localStorage.openStatesAPIKey, function(error, billData){
       if (error) return console.warn(error);
       if (billData == undefined) { alert("Unable to load data"); return; }
       d3.select("#bills-count").text(billData.length);
