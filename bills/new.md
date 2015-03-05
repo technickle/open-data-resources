@@ -90,23 +90,7 @@ $( document ).ready( function() {
   if (localStorage.openStatesAPIKey === undefined) {
     showAPIKeyModal();
   } else {
-    d3.json("http://openstates.org/api/v1/bills/?q=cyber&state=ny&updated_since=2015-01-01&type=bill&apikey=" + localStorage.openStatesAPIKey, function(error, billData){
-      if (error) return console.warn(error);
-      if (billData == undefined) { alert("Unable to load data"); return; }
-      d3.select("#bills-count").text(billData.length);
-      d3.select("#bills-list").selectAll("a").data(billData)
-        .enter().append("a")
-          // .attr("href", function(d) { return d.link })
-          .classed("list-group-item", true)
-          .html(function(d) {
-            return "<button class='btn btn-default glyphicon glyphicon-heart pull-right'></button><h4>"+ d.title + " (" + d.bill_id + ")</h4><p class='text-muted'>Updated: " + d.updated_at + "</p>"
-          });
-      d3.select(".list-group").selectAll("a").sort(function(a,b) {
-        return d3.descending(a.updated_at, b.updated_at);
-      });
-
-    })
-  // showBillModal({bill_id: "S 4072"})
+    getBillActivity("cyber","2015-01-01");
   }
 });
 
@@ -135,6 +119,7 @@ $("#apikey-form").submit(function(e){
       $("#apikey-formgroup").removeClass("has-error");
       $("#apikey-errortext").removeClass("text-danger").text("");
       $("#apikey-modal").modal("hide");
+      getBillActivity("cyber","2015-01-01")
     },
     function(jqXHR, textStatus, errorThrown){
       $("#apikey-formgroup").addClass("has-error");
@@ -182,8 +167,22 @@ function getBillHtml(id, success, error) {
 }
 
 
-function loadBillActivity(keywords,updated_since,callback){
-  //
+function getBillActivity(keywords,updated_since,callback){
+  d3.json("http://openstates.org/api/v1/bills/?q=" + keywords + "&state=ny&updated_since=" + updated_since + "&type=bill&apikey=" + localStorage.openStatesAPIKey, function(error, billData){
+    if (error) return console.warn(error);
+    if (billData == undefined) { alert("Unable to load data"); return; }
+    d3.select("#bills-count").text(billData.length);
+    d3.select("#bills-list").selectAll("a").data(billData)
+      .enter().append("a")
+        // .attr("href", function(d) { return d.link })
+        .classed("list-group-item", true)
+        .html(function(d) {
+          return "<button class='btn btn-default glyphicon glyphicon-heart pull-right'></button><h4>"+ d.title + " (" + d.bill_id + ")</h4><p class='text-muted'>Updated: " + d.updated_at + "</p>"
+        });
+    d3.select(".list-group").selectAll("a").sort(function(a,b) {
+      return d3.descending(a.updated_at, b.updated_at);
+    });
+  });
 }
 
 // clear all locally stored information - makes the app reset to first-time use
