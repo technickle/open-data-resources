@@ -24,7 +24,7 @@ layout: default
     <div class="form-group" id="bill-lookup-formgroup">
       <label class="control-label" for="bill-lookup-input">Bill ID Lookup</label>
       <input type="text" class="form-control" id="bill-lookup-input" placeholder="Example: 'S 3407' or 'A 2118'">
-      <button type="submit" class="btn btn-default">Go</button>
+      <button type="submit" id="bill-lookup-button" class="btn btn-default">Go</button>
     </div>
     <div class="list-group" id="bills-list">
     </div>
@@ -106,8 +106,13 @@ $( document ).ready( function() {
       });
 
     })
-  showBillModal({bill_id: "S 4072"})
+  // showBillModal({bill_id: "S 4072"})
   }
+});
+
+// handler to perform bill lookup based upon text input
+$("#bill-lookup-button").click(function() {
+  showBillModal({bill_id: $("#bill-lookup-input").val()})
 });
 
 // handler to manually show API key config dialog
@@ -119,7 +124,7 @@ $("#changeAPIKey-button").click(function(){
 $("#apikey-modal").on("shown.bs.modal", function(e){
   $("#apikey-input").select();  
   $("#apikey-input").focus();
-})
+});
 
 // handler to check API key and then dismiss API key config dialog
 $("#apikey-form").submit(function(e){
