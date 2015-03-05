@@ -21,11 +21,11 @@ layout: default
 <div class="panel panel-default">
   <div class="panel-heading">Bills <span class="label label-primary pull-right" id="bills-count">0</span></div>
   <div class="panel-body">
-    <div class="form-group" id="bill-lookup-formgroup">
+    <!-- <div class="form-group" id="bill-lookup-formgroup">
       <label class="control-label" for="bill-lookup-input">Bill ID Lookup</label>
       <input type="text" class="form-control" id="bill-lookup-input" placeholder="Example: 'S 3407' or 'A 2118'">
       <button type="submit" id="bill-lookup-button" class="btn btn-default">Go</button>
-    </div>
+    </div> -->
     <div class="list-group" id="bills-list">
     </div>
   </div>
@@ -90,7 +90,7 @@ $( document ).ready( function() {
   if (localStorage.openStatesAPIKey === undefined) {
     showAPIKeyModal();
   } else {
-    getBillActivity("cyber","2015-01-01");
+    getBillActivity({q: "data", updated_since: "2015-01-01"});
   }
 });
 
@@ -119,7 +119,7 @@ $("#apikey-form").submit(function(e){
       $("#apikey-formgroup").removeClass("has-error");
       $("#apikey-errortext").removeClass("text-danger").text("");
       $("#apikey-modal").modal("hide");
-      getBillActivity("cyber","2015-01-01")
+      getBillActivity({updated_since: "2015-01-01"})
     },
     function(jqXHR, textStatus, errorThrown){
       $("#apikey-formgroup").addClass("has-error");
@@ -138,7 +138,8 @@ $("#clearAll-button").click(function(){
 // ********************************************************controllers/functions
 // check the API key to see if it is valid
 function validateAPIKey(key, success, error) {
-  $.getJSON("http://openstates.org/api/v1/metadata/ny/?apikey=" + key)
+  parameters = {apikey: key};
+  $.getJSON("http://openstates.org/api/v1/metadata/ny/?" + encodeQueryData(parameters))
     .success(success)
     .error(error);
 }
@@ -161,26 +162,37 @@ function showBillModal(openStatesData) {
 
 // retrieve bill text HTML fragment using YQL to drop the rest of the page
 function getBillHtml(id, success, error) {
-  $.get("https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20html%20where%20url%3D%22http%3A%2F%2Fassembly.state.ny.us%2Fleg%2F%3Fsh%3Dprintbill%26bn%3D" + id + "%22%20and%20xpath%3D%22%2F%2Fbody%2Fpre%22&format=json")
+  assemblyParameters = {sh: "printbill", bn: id, term: "2015"};
+  yqlParameters = {
+    q: 'select * from html where url="http://assembly.state.ny.us/leg/?' + encodeQueryData(assemblyParameters) + '" and xpath="//body/pre"',
+    format: "json"
+  };
+  $.get("https://query.yahooapis.com/v1/public/yql?" + encodeQueryData(yqlParameters))
     .success(function(data){success(data.query.results.pre)})
     .error(error);
 }
 
+// retrieve bill activity stream (and render it)
+function getBillActivity(parameters,callback){
+  parameters.state = "ny"
+  parameters.type = "bill";
+  parameters.apikey = localStorage.openStatesAPIKey;
 
-function getBillActivity(keywords,updated_since,callback){
-  d3.json("http://openstates.org/api/v1/bills/?q=" + keywords + "&state=ny&updated_since=" + updated_since + "&type=bill&apikey=" + localStorage.openStatesAPIKey, function(error, billData){
+  d3.json("http://openstates.org/api/v1/bills/?" + encodeQueryData(parameters), function(error, billData){
     if (error) return console.warn(error);
     if (billData == undefined) { alert("Unable to load data"); return; }
     d3.select("#bills-count").text(billData.length);
     d3.select("#bills-list").selectAll("a").data(billData)
       .enter().append("a")
-        // .attr("href", function(d) { return d.link })
-        .classed("list-group-item", true)
+        .classed("list-group-item bill-event", true)
         .html(function(d) {
           return "<button class='btn btn-default glyphicon glyphicon-heart pull-right'></button><h4>"+ d.title + " (" + d.bill_id + ")</h4><p class='text-muted'>Updated: " + d.updated_at + "</p>"
         });
     d3.select(".list-group").selectAll("a").sort(function(a,b) {
       return d3.descending(a.updated_at, b.updated_at);
+    });
+    $(".bill-event").click(function(obj){
+      showBillModal(obj.currentTarget.__data__);
     });
   });
 }
@@ -190,6 +202,17 @@ function clearAllData() {
   localStorage.removeItem("openStatesAPIKey");
   localStorage.removeItem("openStatesSearchTerms");
   localStorage.removeItem("lastUpdated");
+}
+
+// *************************************************************utility functions
+
+// generate URL parameters string from JS object
+function encodeQueryData(data)
+{
+   var ret = [];
+   for (var d in data)
+      ret.push(encodeURIComponent(d) + "=" + encodeURIComponent(data[d]));
+   return ret.join("&");
 }
 
 </script>
