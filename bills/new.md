@@ -20,7 +20,15 @@ layout: default
 
 <div class="panel panel-default">
   <div class="panel-heading">Bills <span class="label label-primary pull-right" id="bills-count">0</span></div>
-  <div class="list-group" id="bills-list"></div>
+  <div class="panel-body">
+    <div class="form-group" id="bill-lookup-formgroup">
+      <label class="control-label" for="bill-lookup-input">Bill ID Lookup</label>
+      <input type="text" class="form-control" id="bill-lookup-input" placeholder="Example: 'S 3407' or 'A 2118'">
+      <button type="submit" class="btn btn-default">Go</button>
+    </div>
+    <div class="list-group" id="bills-list">
+    </div>
+  </div>
 </div>
 
 <div class="modal fade" id="apikey-modal">
@@ -51,10 +59,33 @@ layout: default
   </div>
 </div>
 
+<div class="modal fade" id="bill-preview">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="bill-id">S4037-2015</h4>
+      </div>
+      <div class="modal-body" id="bill-content">
+        <pre id="bill-text">Loading...</pre>
+      </div>
+      <div class="modal-footer">
+        <span class="pull-left">Some content in this view is loaded via <a href="https://developer.yahoo.com/yql">YQL</a> <a href="https://www.yahoo.com/?ilc=401" target="_blank"> <img src="https://poweredby.yahoo.com/purple.png" width="134" height="29"/></a></span>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script type="text/javascript" src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script>
-
 // bootstrap.js is loaded from _layouts/index.html
+
+
+// **********************************************************view event handlers
+
+// populate page content from source APIs
+//    (also prompts for API key, etc, if no configuration/data saved locally)
 $( document ).ready( function() {
   if (localStorage.openStatesAPIKey === undefined) {
     showAPIKeyModal();
@@ -75,18 +106,22 @@ $( document ).ready( function() {
       });
 
     })
+  showBillModal({bill_id: "S 4072"})
   }
 });
 
+// handler to manually show API key config dialog
 $("#changeAPIKey-button").click(function(){
     showAPIKeyModal();
 });
 
-$("#clearAll-button").click(function(){
-    clearAllData();
-    location.reload();
-});
+// handler to select input text & set focus when API key config dialog is shown
+$("#apikey-modal").on("shown.bs.modal", function(e){
+  $("#apikey-input").select();  
+  $("#apikey-input").focus();
+})
 
+// handler to check API key and then dismiss API key config dialog
 $("#apikey-form").submit(function(e){
   e.preventDefault();
   validateAPIKey($("#apikey-input").val(),
@@ -104,27 +139,49 @@ $("#apikey-form").submit(function(e){
   });
 });
 
+// handler to clear all locally-stored data
+$("#clearAll-button").click(function(){
+    clearAllData();
+    location.reload();
+});
+
+// ********************************************************controllers/functions
+// check the API key to see if it is valid
 function validateAPIKey(key, success, error) {
-  $.getJSON("http://openstates.org/api/v1/metadata/ny?apikey=" + key)
+  $.getJSON("http://openstates.org/api/v1/metadata/ny/?apikey=" + key)
     .success(success)
     .error(error);
 }
 
+// display the API key config modal after local-loading stored API key
 function showAPIKeyModal() {
   $("#apikey-input").val(localStorage.openStatesAPIKey);
   $("#apikey-modal").modal();
 }
 
-$("#apikey-modal").on("shown.bs.modal", function(e){
-  $("#apikey-input").select();  
-  $("#apikey-input").focus();
-})
+// display the Bill modal
+//    pro tip: load in the content before displaying it!
+function showBillModal(openStatesData) {
+  getBillHtml(openStatesData.bill_id.replace(/ /g,''), function(billHtml){
+    $("#bill-id").text(openStatesData.bill_id);
+    $("#bill-text").html(billHtml);
+    $("#bill-preview").modal();
+  })  
+}
+
+// retrieve bill text HTML fragment using YQL to drop the rest of the page
+function getBillHtml(id, success, error) {
+  $.get("https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20html%20where%20url%3D%22http%3A%2F%2Fassembly.state.ny.us%2Fleg%2F%3Fsh%3Dprintbill%26bn%3D" + id + "%22%20and%20xpath%3D%22%2F%2Fbody%2Fpre%22&format=json")
+    .success(function(data){success(data.query.results.pre)})
+    .error(error);
+}
+
 
 function loadBillActivity(keywords,updated_since,callback){
   //
 }
 
-
+// clear all locally stored information - makes the app reset to first-time use
 function clearAllData() {
   localStorage.removeItem("openStatesAPIKey");
   localStorage.removeItem("openStatesSearchTerms");
