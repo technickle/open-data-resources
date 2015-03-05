@@ -40,16 +40,15 @@ layout: default
           <h4 class="modal-title">Configure API Key</h4>
         </div>
         <div class="modal-body">
-          <p>This application uses the Sunlight Foundation's <a href="http://openstates.org/" target="_new">OpenStates</a> and/or <a href="http://opencivicdata.org/" target="_new">OpenCivicData</a> platform to monitor legislative bills. To access this information, an API key is required. If you do not have one, use the link below to get one, then return here and supply it below.</p>
+          <p>This application uses the Sunlight Foundation's <a href="http://openstates.org/" target="_new">OpenStates</a> and/or <a href="http://opencivicdata.org/" target="_new">OpenCivicData</a> platform. To access this information, an API key is required. <a href="https://sunlightfoundation.com/api/accounts/register/" target="_new">Get an API key</a>.</p>
           <center></center>
           <br />
           <div class="form-group" id="apikey-formgroup">
-            <label class="control-label" for="apikey-input">Sunlight Foundation API Key:</label> (<a href="https://sunlightfoundation.com/api/accounts/register/" target="_new">obtain an API key</a>)
+            <label class="control-label" for="apikey-input">Sunlight Foundation API Key:</label>
             <input type="text" class="form-control" id="apikey-input" placeholder="Type or paste your API key here">
             <span id="apikey-errortext"></span>
           </div>
-          <br />
-          <p class="text-muted">Note: your API key is stored on your computer, and never shared. However, it may be observed by network administrators and others who have access to network traffic.</p>
+          <p class="text-muted"><small>Note: your API key is stored on your computer, and never shared. However, it may be observed by network administrators and others who have access to network traffic.</small></p>
         </div>
         <div class="modal-footer">
           <button type="submit" class="btn btn-primary">Done</button>
