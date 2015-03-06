@@ -19,13 +19,20 @@ layout: default
 </div>
 
 <div class="panel panel-default">
-  <div class="panel-heading">Bills <span class="label label-primary pull-right" id="bills-count">0</span></div>
+  <div class="panel-heading">
+    <div class="form-group" id="bill-lookup-formgroup">
+      <label class="control-label" for="bill-lookup-input">Search keywords:</label>
+      <div class="input-group">
+        <input type="text" class="form-control" id="bill-lookup-input" placeholder="enter a keyword" value="cyber">
+        <span class="input-group-btn">
+          <button type="submit" id="bill-lookup-button" class="btn btn-primary pull-right">Go</button>
+        </span>
+      </div>
+      <h3>Search results <small>(sorted by most recent activity)</small>
+      <span class="label label-primary pull-right" id="bills-count">0</span></h3>
+    </div>
+  </div>
   <div class="panel-body">
-    <!-- <div class="form-group" id="bill-lookup-formgroup">
-      <label class="control-label" for="bill-lookup-input">Bill ID Lookup</label>
-      <input type="text" class="form-control" id="bill-lookup-input" placeholder="Example: 'S 3407' or 'A 2118'">
-      <button type="submit" id="bill-lookup-button" class="btn btn-default">Go</button>
-    </div> -->
     <div class="list-group" id="bills-list">
     </div>
   </div>
@@ -58,9 +65,9 @@ layout: default
   </div>
 </div>
 
-<div class="modal fade" id="bill-preview">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
+<div class="modal container fade" id="bill-preview">
+  <!--<div class="modal-dialog modal-lg">
+    <div class="modal-content">-->
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="bill-id">S4037-2015</h4>
@@ -72,11 +79,20 @@ layout: default
         <span class="pull-left">Some content in this view is loaded via <a href="https://developer.yahoo.com/yql">YQL</a> <a href="https://www.yahoo.com/?ilc=401" target="_blank"> <img src="https://poweredby.yahoo.com/purple.png" width="134" height="29"/></a></span>
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
-    </div>
-  </div>
+    <!-- </div>
+  </div> -->
 </div>
 
 <script type="text/javascript" src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-modal/2.2.5/css/bootstrap-modal-bs3patch.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-modal/2.2.5/css/bootstrap-modal.css">
+
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-modal/2.2.5/js/bootstrap-modal.min.js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-modal/2.2.5/js/bootstrap-modalmanager.min.js"></script>
+
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-tokenfield/0.12.0/bootstrap-tokenfield.min.js"></script>
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-tokenfield/0.12.0/css/bootstrap-tokenfield.min.css">
+
 <script>
 // bootstrap.js is loaded from _layouts/index.html
 
@@ -86,16 +102,20 @@ layout: default
 // populate page content from source APIs
 //    (also prompts for API key, etc, if no configuration/data saved locally)
 $( document ).ready( function() {
+  $("#bill-lookup-input").tokenfield();
   if (localStorage.openStatesAPIKey === undefined) {
     showAPIKeyModal();
   } else {
-    getBillActivity({q: "data", updated_since: "2015-01-01"});
+    // getBillActivity({q: "data OR technology OR cyber", updated_since: "2015-01-01"});
   }
 });
 
-// handler to perform bill lookup based upon text input
-$("#bill-lookup-button").click(function() {
-  showBillModal({bill_id: $("#bill-lookup-input").val()})
+// handler to load keyword results
+$("#bill-lookup-button").click(function(){
+  if (!$("#bill-lookup-input").val().length == 0) {
+    $("#bills-list").empty();
+    getBillActivity({q: $("#bill-lookup-input").val().replace(","," OR "), updated_since: "2015-01-01"});
+  }
 });
 
 // handler to manually show API key config dialog
@@ -118,7 +138,6 @@ $("#apikey-form").submit(function(e){
       $("#apikey-formgroup").removeClass("has-error");
       $("#apikey-errortext").removeClass("text-danger").text("");
       $("#apikey-modal").modal("hide");
-      getBillActivity({updated_since: "2015-01-01"})
     },
     function(jqXHR, textStatus, errorThrown){
       $("#apikey-formgroup").addClass("has-error");
@@ -152,6 +171,7 @@ function showAPIKeyModal() {
 // display the Bill modal
 //    pro tip: load in the content before displaying it!
 function showBillModal(openStatesData) {
+  $("body").modalmanager('loading');
   getBillHtml(openStatesData.bill_id.replace(/ /g,''), function(billHtml){
     $("#bill-id").text(openStatesData.bill_id);
     $("#bill-text").html(billHtml);
@@ -181,12 +201,14 @@ function getBillActivity(parameters,callback){
     if (error) return console.warn(error);
     if (billData == undefined) { alert("Unable to load data"); return; }
     d3.select("#bills-count").text(billData.length);
-    d3.select("#bills-list").selectAll("a").data(billData)
+    billList = d3.select("#bills-list").selectAll("a").data(billData);
+    billList
       .enter().append("a")
         .classed("list-group-item bill-event", true)
         .html(function(d) {
           return "<button class='btn btn-default glyphicon glyphicon-heart pull-right'></button><h4>"+ d.title + " (" + d.bill_id + ")</h4><p class='text-muted'>Updated: " + d.updated_at + "</p>"
-        });
+        })
+    billList.exit().remove();
     d3.select(".list-group").selectAll("a").sort(function(a,b) {
       return d3.descending(a.updated_at, b.updated_at);
     });
