@@ -1,63 +1,108 @@
 // bills-app.js by technickle
 //
-// **********************************************************view event handlers
 
-// populate page content from source APIs
-//    (also prompts for API key, etc, if no configuration/data saved locally)
-$( document ).ready( function() {
+// ************************************************************** initialization
+$(function() {
+  // load previously used search terms into search box
+  if (typeof localStorage.openStatesSearchTerms != "undefined") {
+    $("#bill-lookup-input").val(localStorage.openStatesSearchTerms);
+  }
+  // apply jquery.tokenfield to search box
   $("#bill-lookup-input").tokenfield();
-  if (localStorage.openStatesAPIKey === undefined) {
+
+  // prompt for API key if not configured in localStorage
+  if (typeof localStorage.openStatesAPIKey == "undefined") {
     showAPIKeyModal();
   } else {
-    console.log("$.ready()")
-    // getBillActivity({q: "data OR technology OR cyber", updated_since: "2015-01-01"});
+
+    // load bills if search query is configured in localStorage
+    if (typeof localStorage.openStatesSearchTerms != "undefined") {
+      $("#bill-lookup-input").val(localStorage.openStatesSearchTerms);
+      getBillActivity({q: localStorage.openStatesSearchTerms.replace(/, /g," OR "), updated_since: "2015-01-01"});
+    } else {
+      // to do: prompt user for search terms
+    }
   }
 });
 
-// handler to load keyword results
-$("#bill-lookup-button").click(function(){
-  if (!$("#bill-lookup-input").val().length == 0) {
-    $("#bills-list").empty();
-    getBillActivity({q: $("#bill-lookup-input").val().replace(","," OR "), updated_since: "2015-01-01"});
-  }
-});
+// ********************************************* page interaction event handlers
+$(function() {
 
-// handler to manually show API key config dialog
-$("#changeAPIKey-button").click(function(){
-    showAPIKeyModal();
-});
+  // load search results from keywords dialogue
+  $("#bill-lookup-button").on({
+    click: function( event ){
+      if (!$("#bill-lookup-input").val().length == 0) {
+        // save the search so it can be loaded again
+        localStorage.openStatesSearchTerms = $("#bill-lookup-input").val();
+        $("loading-modal").modal();
+        $("#bills-list").empty();
+        getBillActivity({q: $("#bill-lookup-input").val().replace(/, /g," OR "), updated_since: "2015-01-01"});
+      }
+    }
+  });
 
-// handler to select input text & set focus when API key config dialog is shown
-$("#apikey-modal").on("shown.bs.modal", function(e){
-  $("#apikey-input").select();
-  $("#apikey-input").focus();
-});
+  // manually show API key config dialog
+  $("#change-apikey-button").on({
+    click: function( event ){
+      showAPIKeyModal();
+    }
+  });
 
-// handler to check API key and then dismiss API key config dialog
-$("#apikey-form").submit(function(e){
-  e.preventDefault();
-  validateAPIKey($("#apikey-input").val(),
-    function(data, textStatus, jqXHR){
-      localStorage.openStatesAPIKey = $("#apikey-input").val();
-      $("#apikey-formgroup").removeClass("has-error");
-      $("#apikey-errortext").removeClass("text-danger").text("");
-      $("#apikey-modal").modal("hide");
-    },
-    function(jqXHR, textStatus, errorThrown){
-      $("#apikey-formgroup").addClass("has-error");
-      $("#apikey-errortext").addClass("text-danger").text("Error: incorrect API key, or error validating.");
+  // select input text & set focus when API key config dialog is shown
+  $("#apikey-modal").on({
+    "shown.bs.modal": function( event ){
       $("#apikey-input").select();
       $("#apikey-input").focus();
+    }
   });
+
+  // check API key and then dismiss API key config dialog
+  $("#apikey-form").on({
+    submit: function( event ){
+      event.preventDefault();
+      validateAPIKey($("#apikey-input").val(),
+        function(data, textStatus, jqXHR){
+          localStorage.openStatesAPIKey = $("#apikey-input").val();
+          $("#apikey-formgroup").removeClass("has-error");
+          $("#apikey-errortext").removeClass("text-danger").text("");
+          $("#apikey-modal").modal("hide");
+        },
+        function(jqXHR, textStatus, errorThrown){
+          $("#apikey-formgroup").addClass("has-error");
+          $("#apikey-errortext").addClass("text-danger").text("Error: incorrect API key, or error validating.");
+          $("#apikey-input").select();
+          $("#apikey-input").focus();
+      });
+    }
+  });
+
+  // when the loading modal is hidden, show the bill preview modal
+  $("#bill-preview-loading-modal").on({
+    "hidden.bs.modal": function( event ){
+      $("#bill-preview-modal").modal();
+    }
+  });
+
+  // show clear all confirmation modal
+  $("#pre-clear-all-button").on({
+    click: function( event ){
+      $("#clear-all-data-modal").modal();
+    }
+  });
+
+  // clear all localStorage data and reload page
+  $("#clear-all-data-button").on({
+    click: function (event ){
+      clearAllData();
+      location.reload();
+    }
+  });
+
+  // note: click event handler for loaded bills are registered in getBillActivity
+
 });
 
-// handler to clear all locally-stored data
-$("#clearAll-button").click(function(){
-    clearAllData();
-    location.reload();
-});
-
-// ********************************************************controllers/functions
+// ******************************************************* controllers/functions
 // check the API key to see if it is valid
 function validateAPIKey(key, success, error) {
   parameters = {apikey: key};
@@ -75,11 +120,15 @@ function showAPIKeyModal() {
 // display the Bill modal
 //    pro tip: load in the content before displaying it!
 function showBillModal(openStatesData) {
-  $("body").modalmanager('loading');
+  $("#bill-preview-loading-modal").modal();
   getBillHtml(openStatesData.bill_id.replace(/ /g,''), function(billHtml){
     $("#bill-id").text(openStatesData.bill_id);
     $("#bill-text").html(billHtml);
-    $("#bill-preview").modal();
+    $("#bill-preview-loading-modal").modal('hide');
+    // #bill-preview-modal is shown on loading-bill-preview-modal hidden event
+  }, function(error){
+    console.log(error);
+    $("#bill-preview-loading-modal").modal('hide');
   })
 }
 
@@ -116,8 +165,12 @@ function getBillActivity(parameters,callback){
     d3.select(".list-group").selectAll("a").sort(function(a,b) {
       return d3.descending(a.updated_at, b.updated_at);
     });
-    $(".bill-event").click(function(obj){
-      showBillModal(obj.currentTarget.__data__);
+
+    // register event handler to display bill details modal on row click
+    $(".bill-event").on({
+      click: function ( event ) {
+        showBillModal(event.currentTarget.__data__);
+      }
     });
   });
 }
@@ -129,8 +182,7 @@ function clearAllData() {
   localStorage.removeItem("lastUpdated");
 }
 
-// *************************************************************utility functions
-
+// *********************************************************** utility functions
 // generate URL parameters string from JS object
 function encodeQueryData(data)
 {
