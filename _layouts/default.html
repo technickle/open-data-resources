@@ -24,7 +24,7 @@
     {% endfor %}
   </head>
   <body>
-      <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-inverse">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -46,15 +46,18 @@
         </div><!--/.navbar-collapse -->
       </div>
     </nav>
-  </div>
-  <div class="container"><div class="row">
-  <div class="alert alert-info">
-    <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
-    <span class="sr-only">Note:</span>
-    This site is intended to be a helpful selection of resources related to technology, data, open government, and related laws in New York State. The information here is not guaranteed to be up-to-date, complete, or reliable.
-  </div>
-  {{content}}
-  </div></div>
-  <footer> </footer>
+    <div class="container">
+      <div class="row">
+{% if page.suppressSiteNotice == nil %}
+    <div class="alert alert-info">
+      <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+      <span class="sr-only">Note:</span>
+      This site is intended to be a helpful selection of resources related to technology, data, open government, and related laws in New York State. The information here is not guaranteed to be up-to-date, complete, or reliable.
+    </div>
+{% endif %}
+        {{content}}
+      </div>
+    </div>
+    <footer> </footer>
   </body>
-  </html>
+</html>
