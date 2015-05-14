@@ -38,7 +38,7 @@ layout: default
   <a class="list-group-item" href="http://www.theatlantic.com/live/events/citylab/2015/">
     <span class="badge">10/18/2015 - 10/20/2015</span>
     <h4>CityLab</h4>
-    <p>London, United Kingdom</span>
+    <p>London, United Kingdom</p>
   </a>
   <a class="list-group-item" href="http://summit.theodi.org/">
     <span class="badge">November</span>
