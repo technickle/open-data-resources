@@ -40,6 +40,11 @@ layout: default
     <h4>CityLab</h4>
     <p>London, United Kingdom</p>
   </a>
+  <a class="list-group-item" href="http://icegov.org/">
+    <span class="badge">3 - 5 November 2015</span>
+    <h4>International Conference on Theory and Practice of Electronic Governance (ICEGOV)</h4>
+    <p>Tunis, Tunisia</p>
+  </a>
   <a class="list-group-item" href="http://summit.theodi.org/">
     <span class="badge">November 2015</span>
     <h4>The Open Data Institute</h4>
