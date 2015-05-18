@@ -47,7 +47,7 @@ layout: default
   </a>
   <a class="list-group-item" href="http://summit.theodi.org/">
     <span class="badge">November 2015</span>
-    <h4>The Open Data Institute</h4>
+    <h4>The Open Data Institute Summit</h4>
     <p>Location To Be Determined</p>
   </a>
 </div>
