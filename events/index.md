@@ -30,7 +30,12 @@ layout: default
     <h4>State of the Map</h4>
     <p>New York City, NY, United States</p>
   </a>
-  <a class="list-group-item" href="http://www.codeforamerica.org/summit/">
+  <a class="list-group-item" href="http://awards.theodi.org/">
+    <span class="badge">9 July 2015</span>
+    <h4>Open Data Awards</h4>
+    <p>London, United Kingdom</p>
+  </a>
+    <a class="list-group-item" href="http://www.codeforamerica.org/summit/">
     <span class="badge">30 September - 2 October 2015</span>
     <h4>Code for America Summit</h4>
     <p>Oakland, CA, United States</p>
