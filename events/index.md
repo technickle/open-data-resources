@@ -32,7 +32,7 @@ layout: default
   </a>
   <a class="list-group-item" href="http://awards.theodi.org/">
     <span class="badge">9 July 2015</span>
-    <h4>Open Data Awards</h4>
+    <h4>Open Data Institute: Open Data Awards</h4>
     <p>London, United Kingdom</p>
   </a>
     <a class="list-group-item" href="http://www.codeforamerica.org/summit/">
