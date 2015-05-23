@@ -35,7 +35,12 @@ layout: default
     <h4>Open Data Institute: Open Data Awards</h4>
     <p>London, United Kingdom</p>
   </a>
-    <a class="list-group-item" href="http://www.codeforamerica.org/summit/">
+  <a class="list-group-item" href="http://transparencycamp.org/">
+    <span class="badge">11 - 12 September 2015</span>
+    <h4>Transparency Camp</h4>
+    <p>Washington, D.C., United States</p>
+  </a>
+  <a class="list-group-item" href="http://www.codeforamerica.org/summit/">
     <span class="badge">30 September - 2 October 2015</span>
     <h4>Code for America Summit</h4>
     <p>Oakland, CA, United States</p>
