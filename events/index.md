@@ -5,16 +5,6 @@ layout: default
 ## Open Government Events
 
 <div class="list-group">
-  <a class="list-group-item" href="http://opendatasummit.ca/en/">
-    <span class="badge">25 May 2015</span>
-    <h4>Open Data Summit</h4>
-    <p>Ottawa, ON, Canada</p>
-  </a>
-  <a class="list-group-item" href="http://opendatacon.org/">
-    <span class="badge">28 - 29 May 2015</span>
-    <h4>International Open Data Conference</h4>
-    <p>Ottawa, ON, Canada</p>
-  </a>
   <a class="list-group-item" href="https://personaldemocracy.com/conference">
     <span class="badge">4 - 5 June 2015</span>
     <h4>Personal Democracy Forum</h4>
@@ -65,5 +55,25 @@ layout: default
     <span class="badge">November 2015</span>
     <h4>The Open Data Institute Summit</h4>
     <p>Location To Be Determined</p>
+  </a>
+  <a class="list-group-item" href="http://www.iodc2016.es/">
+    <span class="badge">6 -7 October 2016</span>
+    <h4>International Open Data Conference</h4>
+    <p>Madrid, Spain</p>
+  </a>
+</div>
+
+## Past Events
+
+<div class="list-group">
+  <a class="list-group-item" href="http://opendatasummit.ca/en/">
+    <span class="badge">25 May 2015</span>
+    <h4>Open Data Summit</h4>
+    <p>Ottawa, ON, Canada</p>
+  </a>
+  <a class="list-group-item" href="http://opendatacon.org/">
+    <span class="badge">28 - 29 May 2015</span>
+    <h4>International Open Data Conference</h4>
+    <p>Ottawa, ON, Canada</p>
   </a>
 </div>
