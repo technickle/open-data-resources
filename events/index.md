@@ -5,21 +5,6 @@ layout: default
 ## Open Government Events
 
 <div class="list-group">
-  <a class="list-group-item" href="https://personaldemocracy.com/conference">
-    <span class="badge">4 - 5 June 2015</span>
-    <h4>Personal Democracy Forum</h4>
-    <p>New York City, NY, United States</p>
-  </a>
-  <a class="list-group-item" href="http://hackforchange.org/">
-    <span class="badge">6 June 2015</span>
-    <h4>National Day of Civic Hacking</h4>
-    <p>United States</p>
-  </a>
-  <a class="list-group-item" href="http://stateofthemap.us/">
-    <span class="badge">6 - 8 June 2015</span>
-    <h4>State of the Map</h4>
-    <p>New York City, NY, United States</p>
-  </a>
   <a class="list-group-item" href="http://awards.theodi.org/">
     <span class="badge">9 July 2015</span>
     <h4>Open Data Institute: Open Data Awards</h4>
@@ -75,5 +60,20 @@ layout: default
     <span class="badge">28 - 29 May 2015</span>
     <h4>International Open Data Conference</h4>
     <p>Ottawa, ON, Canada</p>
+  </a>
+  <a class="list-group-item" href="https://personaldemocracy.com/conference">
+    <span class="badge">4 - 5 June 2015</span>
+    <h4>Personal Democracy Forum</h4>
+    <p>New York City, NY, United States</p>
+  </a>
+  <a class="list-group-item" href="http://hackforchange.org/">
+    <span class="badge">6 June 2015</span>
+    <h4>National Day of Civic Hacking</h4>
+    <p>United States</p>
+  </a>
+  <a class="list-group-item" href="http://stateofthemap.us/">
+    <span class="badge">6 - 8 June 2015</span>
+    <h4>State of the Map</h4>
+    <p>New York City, NY, United States</p>
   </a>
 </div>
