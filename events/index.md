@@ -35,7 +35,11 @@ layout: default
     <h4>Socrata Customer Summit 2015 (Socrata Customers & Partners Only)</h4>
     <p>Washington D.C., United States</p>
   </a>
-
+  <a class="list-group-item" href="http://www.opengovpartnership.org/2015Summit">
+    <span class="badge">27 - 29 October 2015</span>
+    <h4>Open Government Partnership Global Summit</h4>
+    <p>Guadalajara, Mexico</p>
+  </a>
   <a class="list-group-item" href="http://icegov.org/">
     <span class="badge">3 - 5 November 2015</span>
     <h4>International Conference on Theory and Practice of Electronic Governance (ICEGOV)</h4>
